@@ -1,0 +1,12 @@
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Shared\bin\Debug\net6.0\MicroservicesProject.Shared.deps.json
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Shared\bin\Debug\net6.0\MicroservicesProject.Shared.dll
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Shared\bin\Debug\net6.0\MicroservicesProject.Shared.pdb
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Shared\obj\Debug\net6.0\MicroservicesProject.Shared.csproj.AssemblyReference.cache
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Shared\obj\Debug\net6.0\MicroservicesProject.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Shared\obj\Debug\net6.0\MicroservicesProject.Shared.AssemblyInfoInputs.cache
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Shared\obj\Debug\net6.0\MicroservicesProject.Shared.AssemblyInfo.cs
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Shared\obj\Debug\net6.0\MicroservicesProject.Shared.csproj.CoreCompileInputs.cache
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Shared\obj\Debug\net6.0\MicroservicesProject.Shared.dll
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Shared\obj\Debug\net6.0\refint\MicroservicesProject.Shared.dll
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Shared\obj\Debug\net6.0\MicroservicesProject.Shared.pdb
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Shared\obj\Debug\net6.0\ref\MicroservicesProject.Shared.dll

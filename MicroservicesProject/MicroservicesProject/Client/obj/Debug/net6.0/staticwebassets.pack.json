@@ -1,0 +1,93 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\SqdoSQ+0.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\scopedcss\\bundle\\MicroservicesProject.Client.styles.css",
+      "PackagePath": "staticwebassets\\MicroservicesProject.Client.styles.css"
+    },
+    {
+      "Id": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\wwwroot\\css\\open-iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+    },
+    {
+      "Id": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.MicroservicesProject.Client.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.MicroservicesProject.Client.props",
+      "PackagePath": "build\\MicroservicesProject.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.MicroservicesProject.Client.props",
+      "PackagePath": "buildMultiTargeting\\MicroservicesProject.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.MicroservicesProject.Client.props",
+      "PackagePath": "buildTransitive\\MicroservicesProject.Client.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
