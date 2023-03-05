@@ -131,10 +131,6 @@
             "Microsoft.AspNetCore.Components.WebAssembly.Server": {
               "target": "Package",
               "version": "[6.0.10, )"
-            },
-            "Microsoft.VisualStudio.Web.BrowserLink": {
-              "target": "Package",
-              "version": "[2.2.0, )"
             }
           },
           "imports": [
