@@ -8,7 +8,7 @@ namespace MicroservicesProject.Students.Service.Controllers
 	[Route("[controller]")]
 	public class StudentController : ControllerBase
 	{
-		private List<StudentDetails> studentTestdata = new List<StudentDetails>();
+		private List<StudentDetails> studentTestdata = new();
 
 		private readonly ILogger<StudentController> _logger;
 
@@ -26,7 +26,7 @@ namespace MicroservicesProject.Students.Service.Controllers
 			return Ok(studentTestdata);
 		}
 
-		[HttpGet(Name = "GetStudentsByCourseId")]
+		[HttpGet("GetStudentsByCourseId/{id:guid}", Name = "GetStudentsByCourseId")]
 		[ProducesResponseType(typeof(IEnumerable<StudentDetails>), (int)HttpStatusCode.OK)]
 		[ProducesResponseType((int)HttpStatusCode.NotFound)]
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
@@ -41,6 +41,48 @@ namespace MicroservicesProject.Students.Service.Controllers
 			{
 				return NotFound();
 			}
+		}
+
+		[HttpPut(Name = "AddStudent")]
+		[ProducesResponseType((int)HttpStatusCode.OK)]
+		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+		public ActionResult AddStudent(StudentDetails student)
+		{
+			studentTestdata.Add(student);
+			return Ok();
+		}
+
+		[HttpPost(Name = "UpdateStudent")]
+		[ProducesResponseType((int)HttpStatusCode.OK)]
+		[ProducesResponseType((int)HttpStatusCode.NotFound)]
+		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+		public ActionResult UpdateStudent(StudentDetails student)
+		{
+			var x = studentTestdata.FirstOrDefault(x => x.Id == student.Id);
+			if (x != null)
+			{
+				studentTestdata.Remove(x);
+				studentTestdata.Add(student);
+				return Ok();
+			}
+
+			return NotFound();
+		}
+
+		[HttpDelete(Name = "DeleteStudent")]
+		[ProducesResponseType((int)HttpStatusCode.OK)]
+		[ProducesResponseType((int)HttpStatusCode.NotFound)]
+		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+		public ActionResult DeleteStudent(Guid id)
+		{
+			var x = studentTestdata.FirstOrDefault(x => x.Id == id);
+			if (x != null)
+			{
+				studentTestdata.Remove(x);
+				return Ok();
+			}
+
+			return NotFound();
 		}
 	}
 }
