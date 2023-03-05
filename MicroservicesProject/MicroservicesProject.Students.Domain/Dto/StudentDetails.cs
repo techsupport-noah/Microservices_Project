@@ -13,6 +13,6 @@ namespace MicroservicesProject.Students.Domain.Dto
 		public string? Mail { get; set; }
 		public string? Username { get; set; }
 
-		//TODO add course list
+		public Guid CourseId { get; set; }
 	}
 }
