@@ -3,11 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesProject.Server", "MicroservicesProject\Server\MicroservicesProject.Server.csproj", "{F8CFAFB7-1118-458B-B8D3-18DF1AAACAC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroservicesProject.Server", "MicroservicesProject\Server\MicroservicesProject.Server.csproj", "{F8CFAFB7-1118-458B-B8D3-18DF1AAACAC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesProject.Client", "MicroservicesProject\Client\MicroservicesProject.Client.csproj", "{A42585FA-AB36-4785-A85A-1620A5E8BABB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroservicesProject.Client", "MicroservicesProject\Client\MicroservicesProject.Client.csproj", "{A42585FA-AB36-4785-A85A-1620A5E8BABB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesProject.Shared", "MicroservicesProject\Shared\MicroservicesProject.Shared.csproj", "{BF3C7969-3448-4AE3-90E4-7235E21F3893}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroservicesProject.Shared", "MicroservicesProject\Shared\MicroservicesProject.Shared.csproj", "{BF3C7969-3448-4AE3-90E4-7235E21F3893}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{B3F28B7A-9E91-4BD1-A78E-54B364A0E68D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Base", "Base", "{6E2AC3F8-84CC-4EA1-AF94-ACE91C0B5614}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{4474FA0A-63CA-4BB9-B6AE-496F400A811F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mail", "Mail", "{BF5A1544-411E-42DC-8EBF-882324DE957C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{210E4352-430D-4A72-956C-12D02C47E06A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroservicesProject.Data.Domain", "MicroservicesProject.Data.Domain\MicroservicesProject.Data.Domain.csproj", "{4916D14E-BFF0-4540-BAE0-38CA2ED97E70}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroservicesProject.Mail.Domain", "MicroservicesProject.Mail.Domain\MicroservicesProject.Mail.Domain.csproj", "{6827642B-D741-4F18-B555-B6833F258159}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,9 +41,25 @@ Global
 		{BF3C7969-3448-4AE3-90E4-7235E21F3893}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF3C7969-3448-4AE3-90E4-7235E21F3893}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF3C7969-3448-4AE3-90E4-7235E21F3893}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4916D14E-BFF0-4540-BAE0-38CA2ED97E70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4916D14E-BFF0-4540-BAE0-38CA2ED97E70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4916D14E-BFF0-4540-BAE0-38CA2ED97E70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4916D14E-BFF0-4540-BAE0-38CA2ED97E70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6827642B-D741-4F18-B555-B6833F258159}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6827642B-D741-4F18-B555-B6833F258159}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6827642B-D741-4F18-B555-B6833F258159}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6827642B-D741-4F18-B555-B6833F258159}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F8CFAFB7-1118-458B-B8D3-18DF1AAACAC7} = {B3F28B7A-9E91-4BD1-A78E-54B364A0E68D}
+		{A42585FA-AB36-4785-A85A-1620A5E8BABB} = {B3F28B7A-9E91-4BD1-A78E-54B364A0E68D}
+		{BF5A1544-411E-42DC-8EBF-882324DE957C} = {4474FA0A-63CA-4BB9-B6AE-496F400A811F}
+		{210E4352-430D-4A72-956C-12D02C47E06A} = {4474FA0A-63CA-4BB9-B6AE-496F400A811F}
+		{4916D14E-BFF0-4540-BAE0-38CA2ED97E70} = {210E4352-430D-4A72-956C-12D02C47E06A}
+		{6827642B-D741-4F18-B555-B6833F258159} = {BF5A1544-411E-42DC-8EBF-882324DE957C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D5DE0ED5-CE58-4DA4-93E7-C9CA76C8E0E4}

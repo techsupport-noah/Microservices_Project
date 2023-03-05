@@ -826,3 +826,4 @@ D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projek
 D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Client\obj\Debug\net6.0\refint\MicroservicesProject.Client.dll
 D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Client\obj\Debug\net6.0\MicroservicesProject.Client.pdb
 D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Client\obj\Debug\net6.0\ref\MicroservicesProject.Client.dll
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Client\bin\Debug\net6.0\libman.json

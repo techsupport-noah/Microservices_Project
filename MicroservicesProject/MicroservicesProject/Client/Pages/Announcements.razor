@@ -1,0 +1,45 @@
+﻿@page "/announcements"
+@using MicroservicesProject.Shared
+@inject HttpClient Http
+
+<PageTitle>Announcements</PageTitle>
+
+<h1>Announcements</h1>
+
+@if (events == null)
+{
+	<p><em>Loading...</em></p>
+}
+else
+{
+	<div class="container">
+		<div class="row-cols-1 ">
+
+			@foreach (var e in events)
+			{
+				<div class="col">
+					<div class="card">
+						<div class="card-header">@e.Id @e.Name</div>
+						<div class="card-body">@e.Description</div>
+					</div>
+				</div>
+			}
+
+		</div>
+
+	</div>
+}
+
+
+@code {
+	private Event[]? events;
+
+	//load all events assigned to a specific user //TODO
+
+	
+	protected override async Task OnInitializedAsync()
+	{
+		//load all events
+		events = await Http.GetFromJsonAsync<Event[]>("Event");
+	}
+}
