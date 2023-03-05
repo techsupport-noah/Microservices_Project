@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace MicroservicesProject.Students.Domain.Dto
 {
-	internal class StudentDetails
+	public class StudentDetails
 	{
+		public Guid Id { get; set; }
+		public string? Name { get; set; }
+		public string? Mail { get; set; }
+		public string? Username { get; set; }
+
+		//TODO add course list
 	}
 }
