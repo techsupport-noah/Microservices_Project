@@ -14,4 +14,10 @@
     <ProjectReference Include="..\MicroservicesProject.Students.Domain\MicroservicesProject.Students.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DataAccess\" />
+    <Folder Include="Mapping\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
 </Project>

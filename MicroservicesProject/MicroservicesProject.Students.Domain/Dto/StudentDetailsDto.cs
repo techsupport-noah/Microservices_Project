@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MicroservicesProject.Students.Domain.Dto
 {
-	public class StudentDetails
+	public class StudentDetailsDto
 	{
 		public Guid Id { get; set; }
 		public string? Name { get; set; }

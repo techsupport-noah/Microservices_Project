@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace MicroservicesProject.Courses.Domain.Dto
 {
-	public class CourseDetails
+	public class CourseDetailsDto
 	{
 		public Guid Id { get; set; }
 		public string? Name { get; set; }
-		//TODO add list of students in the course
 	}
 }

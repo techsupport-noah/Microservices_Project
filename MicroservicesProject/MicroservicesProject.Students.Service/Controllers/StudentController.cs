@@ -8,7 +8,7 @@ namespace MicroservicesProject.Students.Service.Controllers
 	[Route("[controller]")]
 	public class StudentController : ControllerBase
 	{
-		private List<StudentDetails> studentTestdata = new();
+		private List<StudentDetailsDto> _studentsList = new();
 
 		private readonly ILogger<StudentController> _logger;
 
@@ -17,22 +17,22 @@ namespace MicroservicesProject.Students.Service.Controllers
 			_logger = logger;
 		}
 
-		[HttpGet(Name = "GetAll")]
-		[ProducesResponseType(typeof(IEnumerable<StudentDetails>), (int)HttpStatusCode.OK)]
+		[HttpGet(Name = "GetAll")] //doesn't need a template path because it is the only get without a specific path
+		[ProducesResponseType(typeof(IEnumerable<StudentDetailsDto>), (int)HttpStatusCode.OK)]
 		[ProducesResponseType((int)HttpStatusCode.NotFound)]
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
-		public ActionResult<IEnumerable<StudentDetails>> GetAll()
+		public ActionResult<IEnumerable<StudentDetailsDto>> GetAll()
 		{
-			return Ok(studentTestdata);
+			return Ok(_studentsList);
 		}
 
 		[HttpGet("GetStudentsByCourseId/{id:guid}", Name = "GetStudentsByCourseId")]
-		[ProducesResponseType(typeof(IEnumerable<StudentDetails>), (int)HttpStatusCode.OK)]
+		[ProducesResponseType(typeof(IEnumerable<StudentDetailsDto>), (int)HttpStatusCode.OK)]
 		[ProducesResponseType((int)HttpStatusCode.NotFound)]
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
-		public ActionResult<IEnumerable<StudentDetails>> GetStudentsByCourseId(Guid id)
+		public ActionResult<IEnumerable<StudentDetailsDto>> GetStudentsByCourseId(Guid id)
 		{
-			var x = studentTestdata.FindAll(x => x.CourseId == id);
+			var x = _studentsList.FindAll(x => x.CourseId == id);
 			if (x.Any())
 			{
 				return Ok(x);
@@ -46,9 +46,9 @@ namespace MicroservicesProject.Students.Service.Controllers
 		[HttpPut(Name = "AddStudent")]
 		[ProducesResponseType((int)HttpStatusCode.OK)]
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
-		public ActionResult AddStudent(StudentDetails student)
+		public ActionResult AddStudent(StudentDetailsDto student)
 		{
-			studentTestdata.Add(student);
+			_studentsList.Add(student);
 			return Ok();
 		}
 
@@ -56,13 +56,13 @@ namespace MicroservicesProject.Students.Service.Controllers
 		[ProducesResponseType((int)HttpStatusCode.OK)]
 		[ProducesResponseType((int)HttpStatusCode.NotFound)]
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
-		public ActionResult UpdateStudent(StudentDetails student)
+		public ActionResult UpdateStudent(StudentDetailsDto student)
 		{
-			var x = studentTestdata.FirstOrDefault(x => x.Id == student.Id);
+			var x = _studentsList.FirstOrDefault(x => x.Id == student.Id);
 			if (x != null)
 			{
-				studentTestdata.Remove(x);
-				studentTestdata.Add(student);
+				_studentsList.Remove(x);
+				_studentsList.Add(student);
 				return Ok();
 			}
 
@@ -75,10 +75,10 @@ namespace MicroservicesProject.Students.Service.Controllers
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
 		public ActionResult DeleteStudent(Guid id)
 		{
-			var x = studentTestdata.FirstOrDefault(x => x.Id == id);
+			var x = _studentsList.FirstOrDefault(x => x.Id == id);
 			if (x != null)
 			{
-				studentTestdata.Remove(x);
+				_studentsList.Remove(x);
 				return Ok();
 			}
 

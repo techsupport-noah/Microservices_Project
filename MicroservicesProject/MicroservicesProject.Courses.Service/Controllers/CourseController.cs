@@ -8,27 +8,7 @@ namespace MicroservicesProject.Courses.Service.Controllers
 	[Route("[controller]")]
 	public class CourseController : ControllerBase
 	{
-		//Testdata //TODO remove
-		private static List<CourseDetails> courseTestdata = new List<CourseDetails>()
-		{
-			new CourseDetails
-			{
-				Id = Guid.NewGuid(),
-				Name = "Test 1"
-			},
-			new CourseDetails
-			{
-				Id = Guid.NewGuid(),
-				Name = "Test 2"
-			},
-			new CourseDetails
-			{
-				Id = Guid.NewGuid(),
-				Name = "Test 3"
-			}
-		};
-
-
+		private List<CourseDetailsDto> _coursesList = new();
 		private readonly ILogger<CourseController> _logger;
 
 		public CourseController(ILogger<CourseController> logger)
@@ -37,12 +17,54 @@ namespace MicroservicesProject.Courses.Service.Controllers
 		}
 
 		[HttpGet(Name = "GetAll")]
-		[ProducesResponseType(typeof(IEnumerable<CourseDetails>), (int) HttpStatusCode.OK)]
+		[ProducesResponseType(typeof(IEnumerable<CourseDetailsDto>), (int) HttpStatusCode.OK)]
 		[ProducesResponseType((int)HttpStatusCode.NotFound)]
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
-		public ActionResult<IEnumerable<CourseDetails>> GetAll()
+		public ActionResult<IEnumerable<CourseDetailsDto>> GetAll()
 		{
-			return Ok(courseTestdata);
+			return Ok(_coursesList);
+		}
+
+		[HttpPut(Name = "AddCourse")]
+		[ProducesResponseType((int)HttpStatusCode.OK)]
+		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+		public ActionResult AddCourse(CourseDetailsDto course)
+		{
+			_coursesList.Add(course);
+			return Ok();
+		}
+
+		[HttpPost(Name = "UpdateCourse")]
+		[ProducesResponseType((int)HttpStatusCode.OK)]
+		[ProducesResponseType((int)HttpStatusCode.NotFound)]
+		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+		public ActionResult UpdateCourse(CourseDetailsDto course)
+		{
+			var x = _coursesList.FirstOrDefault(x => x.Id == course.Id);
+			if (x != null)
+			{
+				_coursesList.Remove(x);
+				_coursesList.Add(course);
+				return Ok();
+			}
+
+			return NotFound();
+		}
+
+		[HttpDelete(Name = "DeleteCourse")]
+		[ProducesResponseType((int)HttpStatusCode.OK)]
+		[ProducesResponseType((int)HttpStatusCode.NotFound)]
+		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+		public ActionResult DeleteCourse(Guid id)
+		{
+			var x = _coursesList.FirstOrDefault(x => x.Id == id);
+			if (x != null)
+			{
+				_coursesList.Remove(x);
+				return Ok();
+			}
+
+			return NotFound();
 		}
 	}
 }

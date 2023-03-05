@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MicroservicesProject.Courses.Domain\MicroservicesProject.Courses.Domain.csproj" />
+    <ProjectReference Include="..\MicroservicesProject.Students.Domain\MicroservicesProject.Students.Domain.csproj" />
   </ItemGroup>
 
 </Project>
