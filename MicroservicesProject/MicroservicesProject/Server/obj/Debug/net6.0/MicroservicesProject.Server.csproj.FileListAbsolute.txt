@@ -1,3 +1,4 @@
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Server\bin\Debug\net6.0\libman.json
 D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Server\bin\Debug\net6.0\MicroservicesProject.Client.staticwebassets.runtime.json
 D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Server\bin\Debug\net6.0\appsettings.Development.json
 D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Server\bin\Debug\net6.0\appsettings.json
@@ -51,4 +52,3 @@ D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projek
 D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Server\obj\Debug\net6.0\MicroservicesProject.Server.pdb
 D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Server\obj\Debug\net6.0\MicroservicesProject.Server.genruntimeconfig.cache
 D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Server\obj\Debug\net6.0\ref\MicroservicesProject.Server.dll
-D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Server\bin\Debug\net6.0\libman.json

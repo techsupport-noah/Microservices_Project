@@ -8,6 +8,6 @@
 		public string? Mail { get; set; }
 		public string? Username { get; set; }
 
-		public Guid CourseId { get; set; }
+		public Guid? CourseId { get; set; }
 	}
 }

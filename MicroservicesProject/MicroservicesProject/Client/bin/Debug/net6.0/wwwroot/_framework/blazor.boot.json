@@ -196,15 +196,15 @@
       "mscorlib.dll": "sha256-cx\/3nJhFns3tZhQNQOyiRyKJESKxOjLVufzWnri6KSA=",
       "netstandard.dll": "sha256-yWufW5W4SSfjocBcWTEDqnFwTd\/VYtLMc2Y9mPmlggc=",
       "System.Private.CoreLib.dll": "sha256-H009wzPwRoDZlwvpN4KLCsUwN7Y1AmjKB3PIEHA7ObQ=",
-      "MicroservicesProject.Shared.dll": "sha256-FDlUr4LsHvLjKeMjqnAyv\/9Z8rkIk5nBLku2smL9kA0=",
-      "MicroservicesProject.Client.dll": "sha256-LeWS+v5yK8QDjwoV0Cz9lw\/dtYxVfMVT1tvATnjHWCM="
+      "MicroservicesProject.Shared.dll": "sha256-Yui87w0I8OknJoqEpL3RbpmkNQnZU5JnBwysg1EKQ\/I=",
+      "MicroservicesProject.Client.dll": "sha256-Oa4yHuOASRcIhYB\/92OlQIqhxeWGp1h9j+EF10VQ1VM="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "MicroservicesProject.Shared.pdb": "sha256-15uhOiIHY4rxQft10YCR5lO3JjYJxSyUC6esepVo9ds=",
-      "MicroservicesProject.Client.pdb": "sha256-oQgnzHrHo7xzBbCT6Qobvc8mUYQLDceDhgZCnoKaBiY="
+      "MicroservicesProject.Shared.pdb": "sha256-Z0zqDn+fqe8OuHxvw62tCUc3KXNuQ+PDyfT8mNBU\/L0=",
+      "MicroservicesProject.Client.pdb": "sha256-0pG0FeB9BfFwLdg10J3HvF63buy4w7IoehwdbKRHD5o="
     },
     "runtime": {
       "dotnet.6.0.11.0mbpm4yvnf.js": "sha256-F30V+6jU3jwJYFZoLuwMAqzTiOXu6q7zGgOdjYBofDI=",

@@ -401,6 +401,7 @@ D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projek
 D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Client\bin\Debug\net6.0\wwwroot\_framework\System.Resources.ResourceManager.dll.gz
 D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Client\bin\Debug\net6.0\wwwroot\_framework\System.Security.Cryptography.Cng.dll.gz
 D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Client\bin\Debug\net6.0\wwwroot\_framework\System.Runtime.InteropServices.RuntimeInformation.dll.gz
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Client\bin\Debug\net6.0\libman.json
 D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Client\bin\Debug\net6.0\MicroservicesProject.Client.staticwebassets.runtime.json
 D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Client\bin\Debug\net6.0\MicroservicesProject.Client.dll
 D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Client\bin\Debug\net6.0\MicroservicesProject.Client.pdb
@@ -826,4 +827,3 @@ D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projek
 D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Client\obj\Debug\net6.0\refint\MicroservicesProject.Client.dll
 D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Client\obj\Debug\net6.0\MicroservicesProject.Client.pdb
 D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Client\obj\Debug\net6.0\ref\MicroservicesProject.Client.dll
-D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Client\bin\Debug\net6.0\libman.json

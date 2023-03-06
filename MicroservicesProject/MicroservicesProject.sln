@@ -21,29 +21,35 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroservicesProject.Mail.D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Students", "Students", "{CF15D636-8C79-478B-9E06-4D7E4DDB40C8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Professors", "Professors", "{6F3EB68D-7A0F-41AD-AAAA-F401427AF662}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "User", "User", "{6F3EB68D-7A0F-41AD-AAAA-F401427AF662}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesProject.Professors.Domain", "MicroservicesProject.Professors.Domain\MicroservicesProject.Professors.Domain.csproj", "{292B8176-A87D-4A4A-932E-CFBF84485BD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroservicesProject.Users.Domain", "MicroservicesProject.Users.Domain\MicroservicesProject.Users.Domain.csproj", "{292B8176-A87D-4A4A-932E-CFBF84485BD8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesProject.Students.Domain", "MicroservicesProject.Students.Domain\MicroservicesProject.Students.Domain.csproj", "{DE0AD1B7-39E6-4000-B884-07E860653AB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroservicesProject.Students.Domain", "MicroservicesProject.Students.Domain\MicroservicesProject.Students.Domain.csproj", "{DE0AD1B7-39E6-4000-B884-07E860653AB9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Events", "Events", "{31107F02-530B-4262-9965-86F6361B217C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesProject.Events.Domain", "MicroservicesProject.Events.Domain\MicroservicesProject.Events.Domain.csproj", "{9CB06A8A-92CC-43A2-B4DA-BE7B10ECA9C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroservicesProject.Events.Domain", "MicroservicesProject.Events.Domain\MicroservicesProject.Events.Domain.csproj", "{9CB06A8A-92CC-43A2-B4DA-BE7B10ECA9C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesProject.Events.Service", "MicroservicesProject.Events.Service\MicroservicesProject.Events.Service.csproj", "{723FD655-1D19-4DD1-8F4C-1C52E70951F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroservicesProject.Events.Service", "MicroservicesProject.Events.Service\MicroservicesProject.Events.Service.csproj", "{723FD655-1D19-4DD1-8F4C-1C52E70951F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesProject.Mail.Service", "MicroservicesProject.Mail.Service\MicroservicesProject.Mail.Service.csproj", "{156E1ECD-3C99-4332-BE73-6F044284BB8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroservicesProject.Mail.Service", "MicroservicesProject.Mail.Service\MicroservicesProject.Mail.Service.csproj", "{156E1ECD-3C99-4332-BE73-6F044284BB8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesProject.Professors.Service", "MicroservicesProject.Professors.Service\MicroservicesProject.Professors.Service.csproj", "{13747F26-DB10-4DD0-B4F6-5FA4DD9E277D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroservicesProject.Users.Service", "MicroservicesProject.Users.Service\MicroservicesProject.Users.Service.csproj", "{13747F26-DB10-4DD0-B4F6-5FA4DD9E277D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesProject.Students.Service", "MicroservicesProject.Students.Service\MicroservicesProject.Students.Service.csproj", "{5C74F58E-1DF7-465D-98FD-8F52A4CAB7FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroservicesProject.Students.Service", "MicroservicesProject.Students.Service\MicroservicesProject.Students.Service.csproj", "{5C74F58E-1DF7-465D-98FD-8F52A4CAB7FF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Courses", "Courses", "{9CF59ED5-76FD-4647-9E8D-F87C61F65EF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesProject.Courses.Domain", "MicroservicesProject.Courses.Domain\MicroservicesProject.Courses.Domain.csproj", "{2F49F74B-A6C5-4179-B395-12B032688835}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroservicesProject.Courses.Domain", "MicroservicesProject.Courses.Domain\MicroservicesProject.Courses.Domain.csproj", "{2F49F74B-A6C5-4179-B395-12B032688835}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesProject.Courses.Service", "MicroservicesProject.Courses.Service\MicroservicesProject.Courses.Service.csproj", "{C504BD00-6A6B-4F2D-93CC-BF8D0C609846}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroservicesProject.Courses.Service", "MicroservicesProject.Courses.Service\MicroservicesProject.Courses.Service.csproj", "{C504BD00-6A6B-4F2D-93CC-BF8D0C609846}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Invitations", "Invitations", "{A417415B-B7EB-429F-90F4-56DD947577C2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroservicesProject.Invitations.Domain", "MicroservicesProject.Invitations.Domain\MicroservicesProject.Invitations.Domain.csproj", "{DE50D86A-7E0A-4C0B-9D4F-2662A0BB2BE2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroservicesProject.Invitations.Service", "MicroservicesProject.Invitations.Service\MicroservicesProject.Invitations.Service.csproj", "{39B370E7-7117-4607-B0D7-3906D121AFB9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -103,6 +109,14 @@ Global
 		{C504BD00-6A6B-4F2D-93CC-BF8D0C609846}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C504BD00-6A6B-4F2D-93CC-BF8D0C609846}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C504BD00-6A6B-4F2D-93CC-BF8D0C609846}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE50D86A-7E0A-4C0B-9D4F-2662A0BB2BE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE50D86A-7E0A-4C0B-9D4F-2662A0BB2BE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE50D86A-7E0A-4C0B-9D4F-2662A0BB2BE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE50D86A-7E0A-4C0B-9D4F-2662A0BB2BE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39B370E7-7117-4607-B0D7-3906D121AFB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39B370E7-7117-4607-B0D7-3906D121AFB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39B370E7-7117-4607-B0D7-3906D121AFB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39B370E7-7117-4607-B0D7-3906D121AFB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -126,6 +140,9 @@ Global
 		{9CF59ED5-76FD-4647-9E8D-F87C61F65EF4} = {4474FA0A-63CA-4BB9-B6AE-496F400A811F}
 		{2F49F74B-A6C5-4179-B395-12B032688835} = {9CF59ED5-76FD-4647-9E8D-F87C61F65EF4}
 		{C504BD00-6A6B-4F2D-93CC-BF8D0C609846} = {9CF59ED5-76FD-4647-9E8D-F87C61F65EF4}
+		{A417415B-B7EB-429F-90F4-56DD947577C2} = {4474FA0A-63CA-4BB9-B6AE-496F400A811F}
+		{DE50D86A-7E0A-4C0B-9D4F-2662A0BB2BE2} = {A417415B-B7EB-429F-90F4-56DD947577C2}
+		{39B370E7-7117-4607-B0D7-3906D121AFB9} = {A417415B-B7EB-429F-90F4-56DD947577C2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D5DE0ED5-CE58-4DA4-93E7-C9CA76C8E0E4}
