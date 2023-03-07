@@ -11,6 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\MicroservicesProject.Students.Domain\MicroservicesProject.Students.Domain.csproj" />
   </ItemGroup>
 

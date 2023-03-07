@@ -17,11 +17,11 @@ namespace MicroservicesProject.Users.Service.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
-                    Name = table.Column<string>(type: "longtext", nullable: true)
+                    Name = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Mail = table.Column<string>(type: "longtext", nullable: true)
+                    Mail = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Username = table.Column<string>(type: "longtext", nullable: true)
+                    Username = table.Column<string>(type: "varchar(255)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
@@ -34,6 +34,12 @@ namespace MicroservicesProject.Users.Service.DataAccess.Migrations
                 table: "Users",
                 columns: new[] { "Id", "Mail", "Name", "Username" },
                 values: new object[] { new Guid("85b2cddc-2f5d-444c-b84c-258224f32687"), "admin@dhbw.de", "Admin", "admin" });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Users_Username",
+                table: "Users",
+                column: "Username",
+                unique: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

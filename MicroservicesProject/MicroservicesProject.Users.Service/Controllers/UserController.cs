@@ -1,6 +1,12 @@
 using MicroservicesProject.Users.Domain.Dto;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using AutoMapper;
+using System.ComponentModel.DataAnnotations;
 using System.Net;
+using FluentValidation;
+using MicroservicesProject.Users.Service.DataAccess;
+using MicroservicesProject.Users.Service.Model;
 
 namespace MicroservicesProject.Users.Service.Controllers
 {
@@ -8,13 +14,17 @@ namespace MicroservicesProject.Users.Service.Controllers
 	[Route("[controller]")]
 	public class UserController : ControllerBase
 	{
-		private List<UserDetailsDto> _usersList = new();
-
 		private readonly ILogger<UserController> _logger;
+		private readonly UserDbContext _dbContext;
+		private readonly IMapper _mapper;
+		private readonly IValidator<UserDetailsDto> _userValidator;
 
-		public UserController(ILogger<UserController> logger)
+		public UserController(ILogger<UserController> logger, UserDbContext dbContext, IMapper mapper, IValidator<UserDetailsDto> validator)
 		{
+			_dbContext = dbContext;
 			_logger = logger;
+			_mapper = mapper;
+			_userValidator = validator;
 		}
 
 		[HttpGet(Name = "GetAll")]
@@ -23,7 +33,9 @@ namespace MicroservicesProject.Users.Service.Controllers
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
 		public ActionResult<IEnumerable<UserDetailsDto>> GetAll()
 		{
-			return Ok(_usersList);
+			var users = _dbContext.Users.ToList();
+			var returnList = _mapper.Map<List<UserDetailsDto>>(users);
+			return Ok(returnList);
 		}
 
 		[HttpPut(Name = "AddUser")]
@@ -31,8 +43,23 @@ namespace MicroservicesProject.Users.Service.Controllers
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
 		public ActionResult AddUser(UserDetailsDto user)
 		{
-			_usersList.Add(user);
+			var result = _userValidator.Validate(user);
+			if (!result.IsValid)
+			{
+				//couldn't validate incomming data
+				return ValidationProblem();
+			}
+
+			var userModel = _mapper.Map<User>(user);
+			_dbContext.Users.Add(userModel);
+			if (_dbContext.SaveChanges() == 0)
+			{
+				//no data was written to the db --> error
+				//possible constraints problem
+				return Conflict();
+			};
 			return Ok();
+			
 		}
 
 		[HttpPost(Name = "UpdateUser")]
@@ -41,15 +68,25 @@ namespace MicroservicesProject.Users.Service.Controllers
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
 		public ActionResult UpdateUser(UserDetailsDto user)
 		{
-			var x = _usersList.FirstOrDefault(x => x.Id == user.Id);
-			if (x != null)
+			var result = _userValidator.Validate(user);
+			if (!result.IsValid)
 			{
-				_usersList.Remove(x);
-				_usersList.Add(user);
-				return Ok();
+				//couldn't validate incomming data
+				return ValidationProblem();
 			}
 
-			return NotFound();
+			var userModel = _mapper.Map<User>(user);
+
+			var existingUser = _dbContext.Users.FirstOrDefault( u => u.Id == userModel.Id);
+			if (existingUser == null)
+			{
+				_logger.LogDebug("Tried updating user which doesn't exist.");
+				return NotFound();
+			}
+
+			_dbContext.Update(userModel);
+			_dbContext.SaveChanges();
+			return Ok();
 		}
 
 		[HttpDelete(Name = "DeleteUser")]
@@ -58,14 +95,16 @@ namespace MicroservicesProject.Users.Service.Controllers
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
 		public ActionResult DeleteUser(Guid id)
 		{
-			var x = _usersList.FirstOrDefault(x => x.Id == id);
-			if (x != null)
+			var existingUser = _dbContext.Users.FirstOrDefault(u => u.Id == id);
+			if (existingUser == null)
 			{
-				_usersList.Remove(x);
-				return Ok();
+				_logger.LogDebug("Element not found");
+				return NotFound();
 			}
 
-			return NotFound();
+			_dbContext.Users.Remove(existingUser);
+			_dbContext.SaveChanges();
+			return Ok();
 		}
 	}
 }

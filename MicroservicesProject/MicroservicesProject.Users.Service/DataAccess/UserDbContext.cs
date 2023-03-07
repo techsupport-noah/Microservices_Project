@@ -9,7 +9,7 @@ namespace MicroservicesProject.Users.Service.DataAccess
 		{
 		}
 
-		public DbSet<User>? Users { get; set; }
+		public DbSet<User> Users { get; set; }
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
@@ -21,6 +21,7 @@ namespace MicroservicesProject.Users.Service.DataAccess
 					Name = "Admin",
 					Username = "admin"
 				});
+			modelBuilder.Entity<User>().HasIndex(u => u.Username).IsUnique();
 		}
 	}
 }

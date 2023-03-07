@@ -9,6 +9,12 @@ namespace MicroservicesProject.Students.Service.DataAccess
 		{
 		}
 
-		public DbSet<Student>? Students { get; set; }
+		public DbSet<Student> Students { get; set; }
+		protected override void OnModelCreating(ModelBuilder modelBuilder)
+		{
+			base.OnModelCreating(modelBuilder);
+		
+			modelBuilder.Entity<Student>().HasIndex(s => s.Username).IsUnique();
+		}
 	}
 }

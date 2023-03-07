@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MicroservicesProject.Users.Service.DataAccess.Migrations
 {
     [DbContext(typeof(UserDbContext))]
-    [Migration("20230306214051_UsersDbCreate")]
+    [Migration("20230307164408_UsersDbCreate")]
     partial class UsersDbCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,15 +28,21 @@ namespace MicroservicesProject.Users.Service.DataAccess.Migrations
                         .HasColumnType("char(36)");
 
                     b.Property<string>("Mail")
+                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("Username")
-                        .HasColumnType("longtext");
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Username")
+                        .IsUnique();
 
                     b.ToTable("Users");
 

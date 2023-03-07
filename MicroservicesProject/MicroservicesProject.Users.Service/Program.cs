@@ -1,4 +1,9 @@
+using FluentValidation;
+using MicroservicesProject.Users.Domain.Dto;
+using MicroservicesProject.Users.Domain.Validations;
 using MicroservicesProject.Users.Service.DataAccess;
+using MicroservicesProject.Users.Service.Mapping;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
 
@@ -11,6 +16,8 @@ namespace MicroservicesProject.Users.Service
 			var builder = WebApplication.CreateBuilder(args);
 
 			// Add services to the container.
+			builder.Services.AddAutoMapper(typeof(UserProfile).Assembly);
+			builder.Services.AddScoped<IValidator<UserDetailsDto>, UserValidator>();
 			builder.Services.AddUserDb();
 			builder.Services.AddControllers();
 			// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -29,9 +36,7 @@ namespace MicroservicesProject.Users.Service
 			//debug/test only
 			app.UseCors(policyBuilder => policyBuilder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 
-
 			app.UseAuthorization();
-
 
 			app.MapControllers();
 
