@@ -1,4 +1,8 @@
+using FluentValidation;
+using MicroservicesProject.Events.Domain.Dto;
+using MicroservicesProject.Events.Domain.Validations;
 using MicroservicesProject.Events.Service.DataAccess;
+using MicroservicesProject.Events.Service.Mapping;
 using Microsoft.EntityFrameworkCore;
 
 namespace MicroservicesProject.Events.Service
@@ -10,6 +14,8 @@ namespace MicroservicesProject.Events.Service
 			var builder = WebApplication.CreateBuilder(args);
 
 			// Add services to the container.
+			builder.Services.AddAutoMapper(typeof(EventProfile).Assembly);
+			builder.Services.AddScoped<IValidator<EventDetailsDto>, EventValidator>();
 			builder.Services.AddEventDb();
 			builder.Services.AddControllers();
 			// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -32,8 +38,9 @@ namespace MicroservicesProject.Events.Service
 				app.UseSwaggerUI();
 			}
 
-			app.UseAuthorization();
+			app.UseCors(policyBuilder => policyBuilder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 
+			app.UseAuthorization();
 
 			app.MapControllers();
 

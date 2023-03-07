@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\MicroservicesProject.Client.styles.css"
     },
     {
+      "Id": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\wwwroot\\appsettings.json",
+      "PackagePath": "staticwebassets\\appsettings.json"
+    },
+    {
       "Id": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },

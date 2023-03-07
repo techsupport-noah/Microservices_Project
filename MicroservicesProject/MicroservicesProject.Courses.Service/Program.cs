@@ -1,4 +1,8 @@
+using FluentValidation;
+using MicroservicesProject.Courses.Domain.Dto;
+using MicroservicesProject.Courses.Domain.Validations;
 using MicroservicesProject.Courses.Service.DataAccess;
+using MicroservicesProject.Courses.Service.Mapping;
 using Microsoft.EntityFrameworkCore;
 
 namespace MicroservicesProject.Courses.Service
@@ -10,6 +14,8 @@ namespace MicroservicesProject.Courses.Service
 			var builder = WebApplication.CreateBuilder(args);
 
 			// Add services to the container.
+			builder.Services.AddAutoMapper(typeof(CourseProfile).Assembly);
+			builder.Services.AddScoped<IValidator<CourseDetailsDto>, CourseValidator>();
 			builder.Services.AddCourseDb();
 			builder.Services.AddControllers();
 			// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -32,8 +38,9 @@ namespace MicroservicesProject.Courses.Service
 				app.UseSwaggerUI();
 			}
 
-			app.UseAuthorization();
+			app.UseCors(policyBuilder => policyBuilder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 
+			app.UseAuthorization();
 
 			app.MapControllers();
 

@@ -9,6 +9,6 @@ namespace MicroservicesProject.Invitations.Service.DataAccess
 		{
 		}
 
-		public DbSet<Invitation>? Invitations { get; set; }
+		public DbSet<Invitation> Invitations { get; set; }
 	}
 }

@@ -59,7 +59,6 @@ namespace MicroservicesProject.Users.Service.Controllers
 				return Conflict();
 			};
 			return Ok();
-			
 		}
 
 		[HttpPost(Name = "UpdateUser")]
@@ -84,7 +83,8 @@ namespace MicroservicesProject.Users.Service.Controllers
 				return NotFound();
 			}
 
-			_dbContext.Update(userModel);
+			_dbContext.Entry(existingUser).CurrentValues.SetValues(userModel);
+			
 			_dbContext.SaveChanges();
 			return Ok();
 		}

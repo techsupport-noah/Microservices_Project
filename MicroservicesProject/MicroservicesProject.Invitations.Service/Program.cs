@@ -1,4 +1,8 @@
+using FluentValidation;
+using MicroservicesProject.Invitations.Domain.Dto;
+using MicroservicesProject.Invitations.Domain.Validations;
 using MicroservicesProject.Invitations.Service.DataAccess;
+using MicroservicesProject.Invitations.Service.Mapping;
 using Microsoft.EntityFrameworkCore;
 
 namespace MicroservicesProject.Invitations.Service
@@ -10,6 +14,8 @@ namespace MicroservicesProject.Invitations.Service
 			var builder = WebApplication.CreateBuilder(args);
 
 			// Add services to the container.
+			builder.Services.AddAutoMapper(typeof(InvitationProfile).Assembly);
+			builder.Services.AddScoped<IValidator<InvitationDetailsDto>, InvitationValidator>();
 			builder.Services.AddInvitationDb();
 			builder.Services.AddControllers();
 			// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -32,8 +38,9 @@ namespace MicroservicesProject.Invitations.Service
 				app.UseSwaggerUI();
 			}
 
-			app.UseAuthorization();
+			app.UseCors(policyBuilder => policyBuilder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 
+			app.UseAuthorization();
 
 			app.MapControllers();
 

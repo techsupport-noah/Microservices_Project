@@ -32,8 +32,7 @@ namespace MicroservicesProject.Users.Service
 				app.UseSwagger();
 				app.UseSwaggerUI();
 			}
-
-			//debug/test only
+			
 			app.UseCors(policyBuilder => policyBuilder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 
 			app.UseAuthorization();

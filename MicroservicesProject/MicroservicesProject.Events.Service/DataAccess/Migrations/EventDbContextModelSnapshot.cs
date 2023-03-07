@@ -29,9 +29,11 @@ namespace MicroservicesProject.Events.Service.DataAccess.Migrations
                         .HasColumnType("date");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<TimeOnly>("Time")

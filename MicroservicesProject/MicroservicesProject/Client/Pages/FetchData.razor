@@ -1,6 +1,12 @@
 ﻿@page "/fetchdata"
 @using MicroservicesProject.Shared
+@using MicroservicesProject.Users.Domain.Dto
+@using MicroservicesProject.App.User.ApiClient
+
 @inject HttpClient Http
+@inject UserApiClient UserApiClient
+
+
 
 <PageTitle>Weather forecast</PageTitle>
 
@@ -8,7 +14,7 @@
 
 <p>This component demonstrates fetching data from the server.</p>
 
-@if (forecasts == null)
+@if (users == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -24,13 +30,10 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (var forecast in forecasts)
+            @foreach (var user in users)
             {
                 <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
+                    <td>@user.Name</td>
                 </tr>
             }
         </tbody>
@@ -38,10 +41,10 @@ else
 }
 
 @code {
-    private WeatherForecast[]? forecasts;
+	private ICollection<UserDetailsDto> users;
 
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("WeatherForecast");
+	    users = await UserApiClient.GetAllAsync();
     }
 }

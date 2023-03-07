@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MicroservicesProject.Events.Service.DataAccess.Migrations
 {
     [DbContext(typeof(EventDbContext))]
-    [Migration("20230306215314_EventsDbCreate")]
+    [Migration("20230307164827_EventsDbCreate")]
     partial class EventsDbCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,9 +31,11 @@ namespace MicroservicesProject.Events.Service.DataAccess.Migrations
                         .HasColumnType("date");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<TimeOnly>("Time")

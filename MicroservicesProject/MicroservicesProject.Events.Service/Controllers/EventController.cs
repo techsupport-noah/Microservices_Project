@@ -1,6 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using MicroservicesProject.Events.Domain.Dto;
 using System.Net;
+using AutoMapper;
+using FluentValidation;
+using MicroservicesProject.Events.Service.DataAccess;
+using MicroservicesProject.Events.Service.Model;
+using Microsoft.EntityFrameworkCore;
 
 namespace MicroservicesProject.Events.Service.Controllers
 {
@@ -8,13 +13,17 @@ namespace MicroservicesProject.Events.Service.Controllers
 	[Route("[controller]")]
 	public class EventController : ControllerBase
 	{
-		private List<EventDetailsDto> _eventsList = new();
-
 		private readonly ILogger<EventController> _logger;
+		private readonly EventDbContext _dbContext;
+		private readonly IMapper _mapper;
+		private readonly IValidator<EventDetailsDto> _eValidator;
 
-		public EventController(ILogger<EventController> logger)
+		public EventController(ILogger<EventController> logger, EventDbContext dbContext, IMapper mapper, IValidator<EventDetailsDto> validator)
 		{
+			_dbContext = dbContext;
 			_logger = logger;
+			_mapper = mapper;
+			_eValidator = validator;
 		}
 
 		[HttpGet(Name = "GetAll")]
@@ -23,7 +32,9 @@ namespace MicroservicesProject.Events.Service.Controllers
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
 		public ActionResult<IEnumerable<EventDetailsDto>> GetAll()
 		{
-			return Ok(_eventsList);
+			var es = _dbContext.Events.ToList();
+			var returnList = _mapper.Map<List<EventDetailsDto>>(es);
+			return Ok(returnList);
 		}
 
 		[HttpPut(Name = "AddEvent")]
@@ -31,7 +42,21 @@ namespace MicroservicesProject.Events.Service.Controllers
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
 		public ActionResult AddEvent(EventDetailsDto e)
 		{
-			_eventsList.Add(e);
+			var result = _eValidator.Validate(e);
+			if (!result.IsValid)
+			{
+				//couldn't validate incomming data
+				return ValidationProblem();
+			}
+
+			var eModel = _mapper.Map<Event>(e);
+			_dbContext.Events.Add(eModel);
+			if (_dbContext.SaveChanges() == 0)
+			{
+				//no data was written to the db --> error
+				//possible constraints problem
+				return Conflict();
+			};
 			return Ok();
 		}
 
@@ -41,15 +66,26 @@ namespace MicroservicesProject.Events.Service.Controllers
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
 		public ActionResult UpdateEvent(EventDetailsDto e)
 		{
-			var x = _eventsList.FirstOrDefault(x => x.Id == e.Id);
-			if (x != null)
+			var result = _eValidator.Validate(e);
+			if (!result.IsValid)
 			{
-				_eventsList.Remove(x);
-				_eventsList.Add(e);
-				return Ok();
+				//couldn't validate incomming data
+				return ValidationProblem();
 			}
 
-			return NotFound();
+			var eModel = _mapper.Map<Event>(e);
+
+			var existingEvent = _dbContext.Events.FirstOrDefault(u => u.Id == eModel.Id);
+			if (existingEvent == null)
+			{
+				_logger.LogDebug("Tried updating e which doesn't exist.");
+				return NotFound();
+			}
+
+			_dbContext.Entry(existingEvent).CurrentValues.SetValues(eModel);
+
+			_dbContext.SaveChanges();
+			return Ok();
 		}
 
 		[HttpDelete(Name = "DeleteEvent")]
@@ -58,14 +94,16 @@ namespace MicroservicesProject.Events.Service.Controllers
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
 		public ActionResult DeleteEvent(Guid id)
 		{
-			var x = _eventsList.FirstOrDefault(x => x.Id == id);
-			if (x != null)
+			var existingEvent = _dbContext.Events.FirstOrDefault(u => u.Id == id);
+			if (existingEvent == null)
 			{
-				_eventsList.Remove(x);
-				return Ok();
+				_logger.LogDebug("Element not found");
+				return NotFound();
 			}
 
-			return NotFound();
+			_dbContext.Events.Remove(existingEvent);
+			_dbContext.SaveChanges();
+			return Ok();
 		}
 	}
 }

@@ -9,9 +9,16 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.10" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.10" PrivateAssets="all" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\MicroservicesProject.Courses.Domain\MicroservicesProject.Courses.Domain.csproj" />
+    <ProjectReference Include="..\..\MicroservicesProject.Events.Domain\MicroservicesProject.Events.Domain.csproj" />
+    <ProjectReference Include="..\..\MicroservicesProject.Invitations.Domain\MicroservicesProject.Invitations.Domain.csproj" />
+    <ProjectReference Include="..\..\MicroservicesProject.Mail.Domain\MicroservicesProject.Mail.Domain.csproj" />
+    <ProjectReference Include="..\..\MicroservicesProject.Students.Domain\MicroservicesProject.Students.Domain.csproj" />
+    <ProjectReference Include="..\..\MicroservicesProject.Users.Domain\MicroservicesProject.Users.Domain.csproj" />
     <ProjectReference Include="..\Shared\MicroservicesProject.Shared.csproj" />
   </ItemGroup>
 

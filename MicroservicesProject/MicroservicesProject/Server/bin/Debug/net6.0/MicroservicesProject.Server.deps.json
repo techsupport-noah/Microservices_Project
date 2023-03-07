@@ -16,6 +16,14 @@
           "MicroservicesProject.Server.dll": {}
         }
       },
+      "FluentValidation/11.5.1": {
+        "runtime": {
+          "lib/net6.0/FluentValidation.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.5.1.0"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Authorization/6.0.10": {
         "dependencies": {
           "Microsoft.AspNetCore.Metadata": "6.0.10",
@@ -206,6 +214,14 @@
           }
         }
       },
+      "Newtonsoft.Json/13.0.2": {
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.2.27524"
+          }
+        }
+      },
       "System.Diagnostics.DiagnosticSource/6.0.0": {
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
@@ -233,16 +249,69 @@
       },
       "MicroservicesProject.Client/1.0.0": {
         "dependencies": {
+          "MicroservicesProject.Courses.Domain": "1.0.0",
+          "MicroservicesProject.Events.Domain": "1.0.0",
+          "MicroservicesProject.Invitations.Domain": "1.0.0",
+          "MicroservicesProject.Mail.Domain": "1.0.0",
           "MicroservicesProject.Shared": "1.0.0",
-          "Microsoft.AspNetCore.Components.WebAssembly": "6.0.10"
+          "MicroservicesProject.Students.Domain": "1.0.0",
+          "MicroservicesProject.Users.Domain": "1.0.0",
+          "Microsoft.AspNetCore.Components.WebAssembly": "6.0.10",
+          "Newtonsoft.Json": "13.0.2"
         },
         "runtime": {
           "MicroservicesProject.Client.dll": {}
         }
       },
+      "MicroservicesProject.Courses.Domain/1.0.0": {
+        "dependencies": {
+          "FluentValidation": "11.5.1",
+          "MicroservicesProject.Students.Domain": "1.0.0"
+        },
+        "runtime": {
+          "MicroservicesProject.Courses.Domain.dll": {}
+        }
+      },
+      "MicroservicesProject.Events.Domain/1.0.0": {
+        "dependencies": {
+          "FluentValidation": "11.5.1"
+        },
+        "runtime": {
+          "MicroservicesProject.Events.Domain.dll": {}
+        }
+      },
+      "MicroservicesProject.Invitations.Domain/1.0.0": {
+        "dependencies": {
+          "FluentValidation": "11.5.1"
+        },
+        "runtime": {
+          "MicroservicesProject.Invitations.Domain.dll": {}
+        }
+      },
+      "MicroservicesProject.Mail.Domain/1.0.0": {
+        "runtime": {
+          "MicroservicesProject.Mail.Domain.dll": {}
+        }
+      },
       "MicroservicesProject.Shared/1.0.0": {
         "runtime": {
           "MicroservicesProject.Shared.dll": {}
+        }
+      },
+      "MicroservicesProject.Students.Domain/1.0.0": {
+        "dependencies": {
+          "FluentValidation": "11.5.1"
+        },
+        "runtime": {
+          "MicroservicesProject.Students.Domain.dll": {}
+        }
+      },
+      "MicroservicesProject.Users.Domain/1.0.0": {
+        "dependencies": {
+          "FluentValidation": "11.5.1"
+        },
+        "runtime": {
+          "MicroservicesProject.Users.Domain.dll": {}
         }
       }
     }
@@ -252,6 +321,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "FluentValidation/11.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0h1Q5lNOLLyYTWMJmyNoMqhY4CBRvvUWvJP1R4F2CnmmzuWwvB0A8aVmw5+lOuwYnwUwCRrdeMLbc81F38ahNQ==",
+      "path": "fluentvalidation/11.5.1",
+      "hashPath": "fluentvalidation.11.5.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authorization/6.0.10": {
       "type": "package",
@@ -421,6 +497,13 @@
       "path": "microsoft.jsinterop.webassembly/6.0.10",
       "hashPath": "microsoft.jsinterop.webassembly.6.0.10.nupkg.sha512"
     },
+    "Newtonsoft.Json/13.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-R2pZ3B0UjeyHShm9vG+Tu0EBb2lC8b0dFzV9gVn50ofHXh9Smjk6kTn7A/FdAsC8B5cKib1OnGYOXxRBz5XQDg==",
+      "path": "newtonsoft.json/13.0.2",
+      "hashPath": "newtonsoft.json.13.0.2.nupkg.sha512"
+    },
     "System.Diagnostics.DiagnosticSource/6.0.0": {
       "type": "package",
       "serviceable": true,
@@ -461,7 +544,37 @@
       "serviceable": false,
       "sha512": ""
     },
+    "MicroservicesProject.Courses.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MicroservicesProject.Events.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MicroservicesProject.Invitations.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MicroservicesProject.Mail.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "MicroservicesProject.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MicroservicesProject.Students.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MicroservicesProject.Users.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,12 +1,15 @@
 {
   "cacheBootResources": true,
-  "config": [ ],
+  "config": [
+    "appsettings.json"
+  ],
   "debugBuild": true,
   "entryAssembly": "MicroservicesProject.Client",
   "icuDataMode": 0,
   "linkerEnabled": false,
   "resources": {
     "assembly": {
+      "FluentValidation.dll": "sha256-AKp6PjWB2cwUnTZc2NBS+Ir5Hj2G5rtRniI+FT52aDA=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-gbA+AujHUUBawZgIGQVo3vLdHlkaD7QLRM0dStUecSM=",
       "Microsoft.AspNetCore.Components.dll": "sha256-+gNaJML9x0hS\/cLcBimAURDK\/S8nSWJZkTCaP5lgRys=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-uEDGfx46VmVIFGVu1clYPrq64JTRcayMUjUw1cr6Zck=",
@@ -29,6 +32,7 @@
       "Microsoft.Extensions.Primitives.dll": "sha256-jOmoWSfsdQexH\/6QCA56gR1RMEqeix2iDDUBWbpAOQI=",
       "Microsoft.JSInterop.dll": "sha256-Q4f+LWDtWpXnnYHUde+5rI1mzDPNsZKlAw2vLmj7x1I=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-o6JgCcWyug2MjyXwx54FHRaCf1DjpJzEkG2GKhlSyL4=",
+      "Newtonsoft.Json.dll": "sha256-SBbEJ29XXk2FuAYzoN8urfKUlv4AvcM814Q+YTc73g4=",
       "System.IO.Pipelines.dll": "sha256-6+E55JXedimdw1c1bDtVg4K7XuWjVWVTifH8QpfzXSY=",
       "Microsoft.CSharp.dll": "sha256-ZScUDIiTxo1dQUE6uip4qB29zPhkN4IpLP8YotBXZKA=",
       "Microsoft.VisualBasic.Core.dll": "sha256-GO2Nim3i77UgTSYVu2OkMRHAiuFQQFGvX93YzIyu7zg=",
@@ -196,15 +200,27 @@
       "mscorlib.dll": "sha256-cx\/3nJhFns3tZhQNQOyiRyKJESKxOjLVufzWnri6KSA=",
       "netstandard.dll": "sha256-yWufW5W4SSfjocBcWTEDqnFwTd\/VYtLMc2Y9mPmlggc=",
       "System.Private.CoreLib.dll": "sha256-H009wzPwRoDZlwvpN4KLCsUwN7Y1AmjKB3PIEHA7ObQ=",
+      "MicroservicesProject.Courses.Domain.dll": "sha256-nhwSpP0qPa\/7qXakk3ppzjP7UOmhOsOPerO9Zf7JIxA=",
+      "MicroservicesProject.Events.Domain.dll": "sha256-ZTIdFjBqJLDRXwJGYQmm19aTiphuIqbw8hBVoLiJ+lM=",
+      "MicroservicesProject.Invitations.Domain.dll": "sha256-W24mhBmfbz9SyDSs9W4PrfXnvEz9uujM5IL6o4GrMzM=",
+      "MicroservicesProject.Mail.Domain.dll": "sha256-5wcAeu4YdCSiLjvv0BmBADWuClKff3DkWpkfl7poewc=",
       "MicroservicesProject.Shared.dll": "sha256-Yui87w0I8OknJoqEpL3RbpmkNQnZU5JnBwysg1EKQ\/I=",
-      "MicroservicesProject.Client.dll": "sha256-Oa4yHuOASRcIhYB\/92OlQIqhxeWGp1h9j+EF10VQ1VM="
+      "MicroservicesProject.Students.Domain.dll": "sha256-Nwz3MCW1LQS9fuL+cKIYb\/b5MXzwDfMiYXuCug5WcOU=",
+      "MicroservicesProject.Users.Domain.dll": "sha256-mVmCyq7iHRV0yrOGe6ZNPT1+4js5hWN+B5a6x7LrU2A=",
+      "MicroservicesProject.Client.dll": "sha256-TCYqODEe0KbdPn321SmZ1RKTF+bnEjN2vhFhxuJlwFQ="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
+      "MicroservicesProject.Courses.Domain.pdb": "sha256-GHG2FYMlR6aA+LGcEwNNII5qhLedNnrs2v3rEjYlBJk=",
+      "MicroservicesProject.Events.Domain.pdb": "sha256-h3IK17yfnsxlOhjKlXO5b4hTcKPFPXPpMORXMPj7FAo=",
+      "MicroservicesProject.Invitations.Domain.pdb": "sha256-36MlBTjMK7SsTfzc1+pIVjFGlHnMuVQxiTmu9fqI5SY=",
+      "MicroservicesProject.Mail.Domain.pdb": "sha256-ZV0Re2bCXhpHzqvWNGi1uFHKCmwKwIHpdI2m+JwaoMg=",
+      "MicroservicesProject.Students.Domain.pdb": "sha256-EI\/EB93K7EidrFpK9OB6hVzuwnegFoKrQ2tk5ISF180=",
+      "MicroservicesProject.Users.Domain.pdb": "sha256-vlUuQFJR8sT4L0JdnKPD0v6q\/QzvjS+BE46WSVFDJos=",
       "MicroservicesProject.Shared.pdb": "sha256-Z0zqDn+fqe8OuHxvw62tCUc3KXNuQ+PDyfT8mNBU\/L0=",
-      "MicroservicesProject.Client.pdb": "sha256-0pG0FeB9BfFwLdg10J3HvF63buy4w7IoehwdbKRHD5o="
+      "MicroservicesProject.Client.pdb": "sha256-cFdr8i7iCdPLDU2XN6uOGjZcPiO9IWtQjGyYL55Xozc="
     },
     "runtime": {
       "dotnet.6.0.11.0mbpm4yvnf.js": "sha256-F30V+6jU3jwJYFZoLuwMAqzTiOXu6q7zGgOdjYBofDI=",

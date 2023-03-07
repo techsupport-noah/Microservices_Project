@@ -1,5 +1,9 @@
 using System.Net;
+using AutoMapper;
+using FluentValidation;
 using MicroservicesProject.Courses.Domain.Dto;
+using MicroservicesProject.Courses.Service.DataAccess;
+using MicroservicesProject.Courses.Service.Model;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MicroservicesProject.Courses.Service.Controllers
@@ -8,12 +12,17 @@ namespace MicroservicesProject.Courses.Service.Controllers
 	[Route("[controller]")]
 	public class CourseController : ControllerBase
 	{
-		private List<CourseDetailsDto> _coursesList = new();
 		private readonly ILogger<CourseController> _logger;
+		private readonly CourseDbContext _dbContext;
+		private readonly IMapper _mapper;
+		private readonly IValidator<CourseDetailsDto> _courseValidator;
 
-		public CourseController(ILogger<CourseController> logger)
+		public CourseController(ILogger<CourseController> logger, CourseDbContext dbContext, IMapper mapper, IValidator<CourseDetailsDto> validator)
 		{
+			_dbContext = dbContext;
 			_logger = logger;
+			_mapper = mapper;
+			_courseValidator = validator;
 		}
 
 		[HttpGet(Name = "GetAll")]
@@ -22,7 +31,9 @@ namespace MicroservicesProject.Courses.Service.Controllers
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
 		public ActionResult<IEnumerable<CourseDetailsDto>> GetAll()
 		{
-			return Ok(_coursesList);
+			var courses = _dbContext.Courses.ToList();
+			var returnList = _mapper.Map<List<CourseDetailsDto>>(courses);
+			return Ok(returnList);
 		}
 
 		[HttpPut(Name = "AddCourse")]
@@ -30,7 +41,21 @@ namespace MicroservicesProject.Courses.Service.Controllers
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
 		public ActionResult AddCourse(CourseDetailsDto course)
 		{
-			_coursesList.Add(course);
+			var result = _courseValidator.Validate(course);
+			if (!result.IsValid)
+			{
+				//couldn't validate incomming data
+				return ValidationProblem();
+			}
+
+			var courseModel = _mapper.Map<Course>(course);
+			_dbContext.Courses.Add(courseModel);
+			if (_dbContext.SaveChanges() == 0)
+			{
+				//no data was written to the db --> error
+				//possible constraints problem
+				return Conflict();
+			};
 			return Ok();
 		}
 
@@ -40,15 +65,26 @@ namespace MicroservicesProject.Courses.Service.Controllers
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
 		public ActionResult UpdateCourse(CourseDetailsDto course)
 		{
-			var x = _coursesList.FirstOrDefault(x => x.Id == course.Id);
-			if (x != null)
+			var result = _courseValidator.Validate(course);
+			if (!result.IsValid)
 			{
-				_coursesList.Remove(x);
-				_coursesList.Add(course);
-				return Ok();
+				//couldn't validate incomming data
+				return ValidationProblem();
 			}
 
-			return NotFound();
+			var courseModel = _mapper.Map<Course>(course);
+
+			var existingCourse = _dbContext.Courses.FirstOrDefault(u => u.Id == courseModel.Id);
+			if (existingCourse == null)
+			{
+				_logger.LogDebug("Tried updating course which doesn't exist.");
+				return NotFound();
+			}
+
+			_dbContext.Entry(existingCourse).CurrentValues.SetValues(courseModel);
+
+			_dbContext.SaveChanges();
+			return Ok();
 		}
 
 		[HttpDelete(Name = "DeleteCourse")]
@@ -57,14 +93,16 @@ namespace MicroservicesProject.Courses.Service.Controllers
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
 		public ActionResult DeleteCourse(Guid id)
 		{
-			var x = _coursesList.FirstOrDefault(x => x.Id == id);
-			if (x != null)
+			var existingCourse = _dbContext.Courses.FirstOrDefault(u => u.Id == id);
+			if (existingCourse == null)
 			{
-				_coursesList.Remove(x);
-				return Ok();
+				_logger.LogDebug("Element not found");
+				return NotFound();
 			}
 
-			return NotFound();
+			_dbContext.Courses.Remove(existingCourse);
+			_dbContext.SaveChanges();
+			return Ok();
 		}
 	}
 }

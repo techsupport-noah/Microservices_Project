@@ -52,3 +52,17 @@ D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projek
 D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Server\obj\Debug\net6.0\MicroservicesProject.Server.pdb
 D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Server\obj\Debug\net6.0\MicroservicesProject.Server.genruntimeconfig.cache
 D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Server\obj\Debug\net6.0\ref\MicroservicesProject.Server.dll
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Server\bin\Debug\net6.0\FluentValidation.dll
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Server\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Server\bin\Debug\net6.0\MicroservicesProject.Courses.Domain.dll
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Server\bin\Debug\net6.0\MicroservicesProject.Events.Domain.dll
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Server\bin\Debug\net6.0\MicroservicesProject.Invitations.Domain.dll
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Server\bin\Debug\net6.0\MicroservicesProject.Mail.Domain.dll
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Server\bin\Debug\net6.0\MicroservicesProject.Students.Domain.dll
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Server\bin\Debug\net6.0\MicroservicesProject.Users.Domain.dll
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Server\bin\Debug\net6.0\MicroservicesProject.Courses.Domain.pdb
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Server\bin\Debug\net6.0\MicroservicesProject.Events.Domain.pdb
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Server\bin\Debug\net6.0\MicroservicesProject.Invitations.Domain.pdb
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Server\bin\Debug\net6.0\MicroservicesProject.Mail.Domain.pdb
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Server\bin\Debug\net6.0\MicroservicesProject.Students.Domain.pdb
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Server\bin\Debug\net6.0\MicroservicesProject.Users.Domain.pdb

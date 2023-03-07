@@ -9,10 +9,9 @@ namespace MicroservicesProject.Events.Domain.Dto
 	public class EventDetailsDto
 	{
 		public Guid Id { get; set; }
-		public string? Name { get; set; }
-		public string? Description { get; set; }
+		public string Name { get; set; }
+		public string Description { get; set; }
 		public DateOnly Date { get; set; }
 		public TimeOnly Time { get; set; }
-		public Guid[]? InvitedCourses { get; set; } 
 	}
 }

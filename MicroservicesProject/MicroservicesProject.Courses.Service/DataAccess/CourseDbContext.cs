@@ -9,6 +9,6 @@ namespace MicroservicesProject.Courses.Service.DataAccess
 		{
 		}
 
-		public DbSet<Course>? Courses { get; set; }
+		public DbSet<Course> Courses { get; set; }
 	}
 }

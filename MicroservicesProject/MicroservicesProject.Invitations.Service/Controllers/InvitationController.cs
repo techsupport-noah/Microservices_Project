@@ -1,5 +1,9 @@
 using System.Net;
+using AutoMapper;
+using FluentValidation;
 using MicroservicesProject.Invitations.Domain.Dto;
+using MicroservicesProject.Invitations.Service.DataAccess;
+using MicroservicesProject.Invitations.Service.Model;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MicroservicesProject.Invitations.Service.Controllers
@@ -8,12 +12,18 @@ namespace MicroservicesProject.Invitations.Service.Controllers
 	[Route("[controller]")]
 	public class InvitationController : ControllerBase
 	{
-		private List<InvitationDetailsDto> _invitationsList = new();
 		private readonly ILogger<InvitationController> _logger;
+		private readonly InvitationDbContext _dbContext;
+		private readonly IMapper _mapper;
+		private readonly IValidator<InvitationDetailsDto> _invitationValidator;
 
-		public InvitationController(ILogger<InvitationController> logger)
+
+		public InvitationController(ILogger<InvitationController> logger, InvitationDbContext dbContext, IMapper mapper, IValidator<InvitationDetailsDto> validator)
 		{
+			_dbContext = dbContext;
 			_logger = logger;
+			_mapper = mapper;
+			_invitationValidator = validator;
 		}
 
 		[HttpGet(Name = "GetAll")]
@@ -22,7 +32,9 @@ namespace MicroservicesProject.Invitations.Service.Controllers
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
 		public ActionResult<IEnumerable<InvitationDetailsDto>> GetAll()
 		{
-			return Ok(_invitationsList);
+			var invitations = _dbContext.Invitations.ToList();
+			var returnList = _mapper.Map<List<InvitationDetailsDto>>(invitations);
+			return Ok(returnList);
 		}
 
 		[HttpPut(Name = "AddInvitation")]
@@ -30,7 +42,21 @@ namespace MicroservicesProject.Invitations.Service.Controllers
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
 		public ActionResult AddInvitation(InvitationDetailsDto invitation)
 		{
-			_invitationsList.Add(invitation);
+			var result = _invitationValidator.Validate(invitation);
+			if (!result.IsValid)
+			{
+				//couldn't validate incomming data
+				return ValidationProblem();
+			}
+
+			var invitationModel = _mapper.Map<Invitation>(invitation);
+			_dbContext.Invitations.Add(invitationModel);
+			if (_dbContext.SaveChanges() == 0)
+			{
+				//no data was written to the db --> error
+				//possible constraints problem
+				return Conflict();
+			};
 			return Ok();
 		}
 
@@ -40,15 +66,26 @@ namespace MicroservicesProject.Invitations.Service.Controllers
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
 		public ActionResult UpdateInvitation(InvitationDetailsDto invitation)
 		{
-			var x = _invitationsList.FirstOrDefault(x => x.Id == invitation.Id);
-			if (x != null)
+			var result = _invitationValidator.Validate(invitation);
+			if (!result.IsValid)
 			{
-				_invitationsList.Remove(x);
-				_invitationsList.Add(invitation);
-				return Ok();
+				//couldn't validate incomming data
+				return ValidationProblem();
 			}
 
-			return NotFound();
+			var invitationModel = _mapper.Map<Invitation>(invitation);
+
+			var existingInvitation = _dbContext.Invitations.FirstOrDefault(u => u.Id == invitationModel.Id);
+			if (existingInvitation == null)
+			{
+				_logger.LogDebug("Tried updating invitation which doesn't exist.");
+				return NotFound();
+			}
+
+			_dbContext.Entry(existingInvitation).CurrentValues.SetValues(invitationModel);
+
+			_dbContext.SaveChanges();
+			return Ok();
 		}
 
 		[HttpDelete(Name = "DeleteInvitation")]
@@ -57,14 +94,16 @@ namespace MicroservicesProject.Invitations.Service.Controllers
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
 		public ActionResult DeleteInvitation(Guid id)
 		{
-			var x = _invitationsList.FirstOrDefault(x => x.Id == id);
-			if (x != null)
+			var existingInvitation = _dbContext.Invitations.FirstOrDefault(u => u.Id == id);
+			if (existingInvitation == null)
 			{
-				_invitationsList.Remove(x);
-				return Ok();
+				_logger.LogDebug("Element not found");
+				return NotFound();
 			}
 
-			return NotFound();
+			_dbContext.Invitations.Remove(existingInvitation);
+			_dbContext.SaveChanges();
+			return Ok();
 		}
 	}
 }

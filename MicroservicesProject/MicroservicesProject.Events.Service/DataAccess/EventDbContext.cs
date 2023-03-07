@@ -9,7 +9,7 @@ namespace MicroservicesProject.Events.Service.DataAccess
 		{
 		}
 
-		public DbSet<Event>? Events { get; set; }
+		public DbSet<Event> Events { get; set; }
 	}
 }
 

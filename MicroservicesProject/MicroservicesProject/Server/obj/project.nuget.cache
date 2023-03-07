@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "eBhiHY91Pn6MUlVpAAe0gBLb/odYa8ZUY9nrP39EKEmksWQiNu6jhJyO0YWB0ukqEIgUOjNAtrrHzOTVBOTX4A==",
+  "dgSpecHash": "1fucrM3hNsavbjHwGTQr0be1XA3Fq1MGClmCIDNnHPzFy0dKtvzvCZNURHiVT0jjmpCJ6WuAe0+KeaAORQixaQ==",
   "success": true,
   "projectFilePath": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Server\\MicroservicesProject.Server.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\noah\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
     "C:\\Users\\noah\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.10\\microsoft.aspnetcore.authorization.6.0.10.nupkg.sha512",
     "C:\\Users\\noah\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.10\\microsoft.aspnetcore.components.6.0.10.nupkg.sha512",
     "C:\\Users\\noah\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\6.0.10\\microsoft.aspnetcore.components.analyzers.6.0.10.nupkg.sha512",
@@ -28,6 +29,7 @@
     "C:\\Users\\noah\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\noah\\.nuget\\packages\\microsoft.jsinterop\\6.0.10\\microsoft.jsinterop.6.0.10.nupkg.sha512",
     "C:\\Users\\noah\\.nuget\\packages\\microsoft.jsinterop.webassembly\\6.0.10\\microsoft.jsinterop.webassembly.6.0.10.nupkg.sha512",
+    "C:\\Users\\noah\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512",
     "C:\\Users\\noah\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\noah\\.nuget\\packages\\system.io.pipelines\\6.0.3\\system.io.pipelines.6.0.3.nupkg.sha512",
     "C:\\Users\\noah\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",

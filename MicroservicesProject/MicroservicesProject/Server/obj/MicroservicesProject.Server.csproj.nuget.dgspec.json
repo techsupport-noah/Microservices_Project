@@ -4,6 +4,370 @@
     "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Server\\MicroservicesProject.Server.csproj": {}
   },
   "projects": {
+    "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Courses.Domain\\MicroservicesProject.Courses.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Courses.Domain\\MicroservicesProject.Courses.Domain.csproj",
+        "projectName": "MicroservicesProject.Courses.Domain",
+        "projectPath": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Courses.Domain\\MicroservicesProject.Courses.Domain.csproj",
+        "packagesPath": "C:\\Users\\noah\\.nuget\\packages\\",
+        "outputPath": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Courses.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\noah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Students.Domain\\MicroservicesProject.Students.Domain.csproj": {
+                "projectPath": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Students.Domain\\MicroservicesProject.Students.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.5.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Events.Domain\\MicroservicesProject.Events.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Events.Domain\\MicroservicesProject.Events.Domain.csproj",
+        "projectName": "MicroservicesProject.Events.Domain",
+        "projectPath": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Events.Domain\\MicroservicesProject.Events.Domain.csproj",
+        "packagesPath": "C:\\Users\\noah\\.nuget\\packages\\",
+        "outputPath": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Events.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\noah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.5.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Invitations.Domain\\MicroservicesProject.Invitations.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Invitations.Domain\\MicroservicesProject.Invitations.Domain.csproj",
+        "projectName": "MicroservicesProject.Invitations.Domain",
+        "projectPath": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Invitations.Domain\\MicroservicesProject.Invitations.Domain.csproj",
+        "packagesPath": "C:\\Users\\noah\\.nuget\\packages\\",
+        "outputPath": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Invitations.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\noah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.5.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Mail.Domain\\MicroservicesProject.Mail.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Mail.Domain\\MicroservicesProject.Mail.Domain.csproj",
+        "projectName": "MicroservicesProject.Mail.Domain",
+        "projectPath": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Mail.Domain\\MicroservicesProject.Mail.Domain.csproj",
+        "packagesPath": "C:\\Users\\noah\\.nuget\\packages\\",
+        "outputPath": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Mail.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\noah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Students.Domain\\MicroservicesProject.Students.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Students.Domain\\MicroservicesProject.Students.Domain.csproj",
+        "projectName": "MicroservicesProject.Students.Domain",
+        "projectPath": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Students.Domain\\MicroservicesProject.Students.Domain.csproj",
+        "packagesPath": "C:\\Users\\noah\\.nuget\\packages\\",
+        "outputPath": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Students.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\noah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.5.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Users.Domain\\MicroservicesProject.Users.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Users.Domain\\MicroservicesProject.Users.Domain.csproj",
+        "projectName": "MicroservicesProject.Users.Domain",
+        "projectPath": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Users.Domain\\MicroservicesProject.Users.Domain.csproj",
+        "packagesPath": "C:\\Users\\noah\\.nuget\\packages\\",
+        "outputPath": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Users.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\noah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.5.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\MicroservicesProject.Client.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -28,6 +392,24 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Courses.Domain\\MicroservicesProject.Courses.Domain.csproj": {
+                "projectPath": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Courses.Domain\\MicroservicesProject.Courses.Domain.csproj"
+              },
+              "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Events.Domain\\MicroservicesProject.Events.Domain.csproj": {
+                "projectPath": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Events.Domain\\MicroservicesProject.Events.Domain.csproj"
+              },
+              "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Invitations.Domain\\MicroservicesProject.Invitations.Domain.csproj": {
+                "projectPath": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Invitations.Domain\\MicroservicesProject.Invitations.Domain.csproj"
+              },
+              "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Mail.Domain\\MicroservicesProject.Mail.Domain.csproj": {
+                "projectPath": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Mail.Domain\\MicroservicesProject.Mail.Domain.csproj"
+              },
+              "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Students.Domain\\MicroservicesProject.Students.Domain.csproj": {
+                "projectPath": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Students.Domain\\MicroservicesProject.Students.Domain.csproj"
+              },
+              "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Users.Domain\\MicroservicesProject.Users.Domain.csproj": {
+                "projectPath": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject.Users.Domain\\MicroservicesProject.Users.Domain.csproj"
+              },
               "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Shared\\MicroservicesProject.Shared.csproj": {
                 "projectPath": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Shared\\MicroservicesProject.Shared.csproj"
               }
@@ -52,6 +434,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.10, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2, )"
             }
           },
           "imports": [
