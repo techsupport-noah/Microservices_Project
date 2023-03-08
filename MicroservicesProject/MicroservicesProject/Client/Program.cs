@@ -24,8 +24,10 @@ namespace MicroservicesProject.Client
 			var studentsApiUrl = builder.Configuration["StudentsApiUrl"];
 			var usersApiUrl = builder.Configuration["UsersApiUrl"];
 
-			//api class registrations
-			builder.Services.AddScoped<CourseApiClient>(provider =>
+            //http registration
+            builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+            //api class registrations
+            builder.Services.AddScoped<CourseApiClient>(provider =>
 			{
 				var httpClient = provider.GetRequiredService<HttpClient>();
 				return new CourseApiClient(coursesApiUrl, httpClient);
