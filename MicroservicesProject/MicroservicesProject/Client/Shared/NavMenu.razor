@@ -1,34 +1,80 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">MicroservicesProject</a>
-        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </div>
-</div>
+﻿@inject NavigationManager nav
 
-<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-	    <div class="nav-item px-3">
-		    <NavLink class="nav-link" href="announcements">
-			    <span class="oi oi-list-rich" aria-hidden="true"></span> Announcements
-		    </NavLink>
-	    </div>
-    </nav>
-</div>
+<header>
+	<nav class="navbar navbar-expand-sm navbar-dark bg-primary bg-gradient">
+		<div class="container-fluid justify-content-center">
+			<!-- Toggling Button (when collapsed) -->
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsable_content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<!-- Links -->
+			<ul class="navbar-nav mx-4">
+					<!-- Logo/Title -->
+					<a class="navbar-brand" href="/"> Alumni, Profs und Co </a>
+				
+				<div class="collapse navbar-collapse" id="collapsable_content">
+					@if (nav.ToBaseRelativePath(nav.Uri) == "")
+					{
+						<li class="nav-item" aria-current=page>
+							<a class="nav-link active" href="/">Home</a>
+						</li>
+					}
+					else
+					{
+						<li class="nav-item" aria-current=undefined>
+							<a class="nav-link" href="/">Home</a>
+						</li>
+
+					}
+					@if (nav.ToBaseRelativePath(nav.Uri) == "/events")
+					{
+						<li class="nav-item" aria-current=page>
+						<a class="nav-link active" href="/">Events</a>
+						</li>
+					}
+					else
+					{
+						<li class="nav-item" aria-current=undefined>
+						<a class="nav-link" href="/">Events</a>
+						</li>
+
+					}
+					@if (nav.ToBaseRelativePath(nav.Uri) == "/admin")
+					{
+					<li class="nav-item" aria-current=page>
+						<a class="nav-link active" href="/">Admin</a>
+					</li>
+					}
+					else
+					{
+					<li class="nav-item" aria-current=undefined>
+						<a class="nav-link" href="/">Admin</a>
+					</li>
+
+					}
+					@if (nav.ToBaseRelativePath(nav.Uri) == "/account")
+					{
+					<li class="nav-item" aria-current=page>
+						<a class="nav-link active" href="/">Account</a>
+					</li>
+					}
+					else
+					{
+					<li class="nav-item" aria-current=undefined>
+						<a class="nav-link" href="/">Account</a>
+					</li>
+
+					}
+				</div>
+			</ul>
+		</div>
+	</nav>
+</header>
 
 @code {
-    private bool collapseNavMenu = true;
-
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
+	protected override async Task OnInitializedAsync()
+	{
+		await base.OnInitializedAsync();
+		Console.WriteLine(nav.ToBaseRelativePath(nav.Uri));
+	}
 }
