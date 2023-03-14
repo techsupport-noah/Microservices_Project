@@ -7,6 +7,8 @@ using System.Net;
 using FluentValidation;
 using MicroservicesProject.Users.Service.DataAccess;
 using MicroservicesProject.Users.Service.Model;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace MicroservicesProject.Users.Service.Controllers
 {
@@ -31,6 +33,9 @@ namespace MicroservicesProject.Users.Service.Controllers
 		[ProducesResponseType(typeof(IEnumerable<UserDetailsDto>), (int)HttpStatusCode.OK)]
 		[ProducesResponseType((int)HttpStatusCode.NotFound)]
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+		[ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+		[ProducesResponseType((int)HttpStatusCode.Forbidden)]
+		[Authorize(Roles = "Administrator")]
 		public ActionResult<IEnumerable<UserDetailsDto>> GetAll()
 		{
 			var users = _dbContext.Users.ToList();
@@ -41,6 +46,9 @@ namespace MicroservicesProject.Users.Service.Controllers
 		[HttpPut(Name = "AddUser")]
 		[ProducesResponseType((int)HttpStatusCode.OK)]
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+		[ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+		[ProducesResponseType((int)HttpStatusCode.Forbidden)]
+		[Authorize(Roles = "Administrator")]
 		public ActionResult AddUser(UserDetailsDto user)
 		{
 			var result = _userValidator.Validate(user);
@@ -65,6 +73,9 @@ namespace MicroservicesProject.Users.Service.Controllers
 		[ProducesResponseType((int)HttpStatusCode.OK)]
 		[ProducesResponseType((int)HttpStatusCode.NotFound)]
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+		[ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+		[ProducesResponseType((int)HttpStatusCode.Forbidden)]
+		[Authorize(Roles = "Administrator")]
 		public ActionResult UpdateUser(UserDetailsDto user)
 		{
 			var result = _userValidator.Validate(user);
@@ -93,6 +104,9 @@ namespace MicroservicesProject.Users.Service.Controllers
 		[ProducesResponseType((int)HttpStatusCode.OK)]
 		[ProducesResponseType((int)HttpStatusCode.NotFound)]
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+		[ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+		[ProducesResponseType((int)HttpStatusCode.Forbidden)]
+		[Authorize(Roles = "Administrator")]
 		public ActionResult DeleteUser(Guid id)
 		{
 			var existingUser = _dbContext.Users.FirstOrDefault(u => u.Id == id);

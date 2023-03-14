@@ -3,6 +3,8 @@ using MicroservicesProject.Courses.Domain.Dto;
 using MicroservicesProject.Courses.Domain.Validations;
 using MicroservicesProject.Courses.Service.DataAccess;
 using MicroservicesProject.Courses.Service.Mapping;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 
 namespace MicroservicesProject.Courses.Service
@@ -28,6 +30,34 @@ namespace MicroservicesProject.Courses.Service
 			{
 				optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 			});
+
+			var authority = builder.Configuration["Identity:Authority"];
+			var audience = builder.Configuration["Identity:Audience"];
+
+			builder.Services
+				//.AddTransient<IClaimsTransformation>(_ => new KeycloakRolesClaimsTransformer("roles", audience))
+				.AddAuthentication(options =>
+				{
+					options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+					options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+				})
+				.AddJwtBearer(options =>
+				{
+					options.Authority = authority;
+					options.Audience = audience;
+					options.RequireHttpsMetadata = false; //UNSECURE!!!
+					options.TokenValidationParameters.ValidateIssuer = false;
+					options.IncludeErrorDetails = true;
+					options.Events.OnAuthenticationFailed += context =>
+					{
+					    Console.WriteLine($"Authentication failed: {context?.Exception?.Message}");
+					    return Task.FromResult(0);
+					};
+					options.Events.OnForbidden += async context => Console.WriteLine($"Authentication forbidden");
+					options.SaveToken = true;
+					options.TokenValidationParameters.RoleClaimType = "roles";
+					options.TokenValidationParameters.NameClaimType = "preferred_username";
+				});
 
 			var app = builder.Build();
 

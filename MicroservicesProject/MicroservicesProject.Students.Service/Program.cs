@@ -6,6 +6,7 @@ using System.Configuration;
 using MicroservicesProject.Students.Domain.Dto;
 using MicroservicesProject.Students.Domain.Validations;
 using MicroservicesProject.Students.Service.Mapping;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace MicroservicesProject.Students.Service
 {
@@ -30,7 +31,35 @@ namespace MicroservicesProject.Students.Service
 			{
 				optionsBuilder.UseMySql(connectionString,ServerVersion.AutoDetect(connectionString));
 			});
-			
+
+			var authority = builder.Configuration["Identity:Authority"];
+			var audience = builder.Configuration["Identity:Audience"];
+
+			builder.Services
+				//.AddTransient<IClaimsTransformation>(_ => new KeycloakRolesClaimsTransformer("roles", audience))
+				.AddAuthentication(options =>
+				{
+					options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+					options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+				})
+				.AddJwtBearer(options =>
+				{
+					options.Authority = authority;
+					options.Audience = audience;
+					options.RequireHttpsMetadata = false; //UNSECURE!!!
+					options.TokenValidationParameters.ValidateIssuer = false;
+					options.IncludeErrorDetails = true;
+					options.Events.OnAuthenticationFailed += context =>
+					{
+						Console.WriteLine($"Authentication failed: {context?.Exception?.Message}");
+						return Task.FromResult(0);
+					};
+					options.Events.OnForbidden += async context => Console.WriteLine($"Authentication forbidden");
+					options.SaveToken = true;
+					options.TokenValidationParameters.RoleClaimType = "roles";
+					options.TokenValidationParameters.NameClaimType = "preferred_username";
+				});
+
 			var app = builder.Build();
 
 			// Configure the HTTP request pipeline.

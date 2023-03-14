@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CisiBVcIevFibkiSILyZHWmcZ0BtoyR7Cr4J6UnWUVk=",
+  "Hash": "Pk0oImDdsqht6+yr2EDrtOSXul56VyWGACpoWN5Rc4k=",
   "Source": "MicroservicesProject.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\noah\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\6.0.14\\staticwebassets\\AuthenticationService.js",
+      "SourceId": "Microsoft.AspNetCore.Components.WebAssembly.Authentication",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\noah\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\6.0.14\\staticwebassets\\",
+      "BasePath": "_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication",
+      "RelativePath": "AuthenticationService.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\noah\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\6.0.14\\staticwebassets\\AuthenticationService.js"
+    },
     {
       "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\blazor.boot.json",
       "SourceId": "MicroservicesProject.Client",
@@ -473,7 +490,24 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\noah\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.10\\lib\\net6.0\\Microsoft.AspNetCore.Authorization.dll"
+      "OriginalItemSpec": "C:\\Users\\noah\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.14\\lib\\net6.0\\Microsoft.AspNetCore.Authorization.dll"
+    },
+    {
+      "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.dll",
+      "SourceId": "MicroservicesProject.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Authorization.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\noah\\.nuget\\packages\\microsoft.aspnetcore.components.authorization\\6.0.14\\lib\\net6.0\\Microsoft.AspNetCore.Components.Authorization.dll"
     },
     {
       "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll",
@@ -490,7 +524,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\noah\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.10\\lib\\net6.0\\Microsoft.AspNetCore.Components.dll"
+      "OriginalItemSpec": "C:\\Users\\noah\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.14\\lib\\net6.0\\Microsoft.AspNetCore.Components.dll"
     },
     {
       "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.dll",
@@ -507,7 +541,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\noah\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\6.0.10\\lib\\net6.0\\Microsoft.AspNetCore.Components.Forms.dll"
+      "OriginalItemSpec": "C:\\Users\\noah\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\6.0.14\\lib\\net6.0\\Microsoft.AspNetCore.Components.Forms.dll"
     },
     {
       "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.dll",
@@ -524,7 +558,24 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\noah\\.nuget\\packages\\microsoft.aspnetcore.components.web\\6.0.10\\lib\\net6.0\\Microsoft.AspNetCore.Components.Web.dll"
+      "OriginalItemSpec": "C:\\Users\\noah\\.nuget\\packages\\microsoft.aspnetcore.components.web\\6.0.14\\lib\\net6.0\\Microsoft.AspNetCore.Components.Web.dll"
+    },
+    {
+      "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll",
+      "SourceId": "MicroservicesProject.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\noah\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\6.0.14\\lib\\net6.0\\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll"
     },
     {
       "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.dll",
@@ -558,7 +609,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\noah\\.nuget\\packages\\microsoft.aspnetcore.metadata\\6.0.10\\lib\\net6.0\\Microsoft.AspNetCore.Metadata.dll"
+      "OriginalItemSpec": "C:\\Users\\noah\\.nuget\\packages\\microsoft.aspnetcore.metadata\\6.0.14\\lib\\net6.0\\Microsoft.AspNetCore.Metadata.dll"
     },
     {
       "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.CSharp.dll",
@@ -762,7 +813,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\noah\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.2\\lib\\net6.0\\Microsoft.Extensions.Logging.Abstractions.dll"
+      "OriginalItemSpec": "C:\\Users\\noah\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.3\\lib\\net6.0\\Microsoft.Extensions.Logging.Abstractions.dll"
     },
     {
       "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.dll",
@@ -830,7 +881,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\noah\\.nuget\\packages\\microsoft.jsinterop\\6.0.10\\lib\\net6.0\\Microsoft.JSInterop.dll"
+      "OriginalItemSpec": "C:\\Users\\noah\\.nuget\\packages\\microsoft.jsinterop\\6.0.14\\lib\\net6.0\\Microsoft.JSInterop.dll"
     },
     {
       "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.JSInterop.WebAssembly.dll",
@@ -4250,6 +4301,23 @@
       "OriginalItemSpec": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Abstractions.dll"
     },
     {
+      "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\5mh2M7q8.gz",
+      "SourceId": "MicroservicesProject.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Web.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.dll"
+    },
+    {
       "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\5mvXkMno.gz",
       "SourceId": "MicroservicesProject.Client",
       "SourceType": "Computed",
@@ -4486,6 +4554,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.CSharp.dll"
+    },
+    {
+      "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\9n3aZjGr.gz",
+      "SourceId": "MicroservicesProject.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Authorization.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll"
     },
     {
       "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\9ovh+sZn.gz",
@@ -4828,6 +4913,23 @@
       "OriginalItemSpec": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Net.Security.dll"
     },
     {
+      "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\d30qNNL8.gz",
+      "SourceId": "MicroservicesProject.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll"
+    },
+    {
       "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\D62MPK6h.gz",
       "SourceId": "MicroservicesProject.Client",
       "SourceType": "Computed",
@@ -5134,23 +5236,6 @@
       "OriginalItemSpec": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.Compression.dll"
     },
     {
-      "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\fS19FMmj.gz",
-      "SourceId": "MicroservicesProject.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Authorization.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll"
-    },
-    {
       "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\Fv6sYsz5.gz",
       "SourceId": "MicroservicesProject.Client",
       "SourceType": "Computed",
@@ -5251,40 +5336,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\MicroservicesProject.Mail.Domain.dll"
-    },
-    {
-      "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\Ghp+JzY+.gz",
-      "SourceId": "MicroservicesProject.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Forms.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.dll"
-    },
-    {
-      "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\GiXoyvqW.gz",
-      "SourceId": "MicroservicesProject.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.Extensions.Logging.Abstractions.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.dll"
     },
     {
       "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\gmG4+HEe.gz",
@@ -5542,6 +5593,23 @@
       "OriginalItemSpec": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.IsolatedStorage.dll"
     },
     {
+      "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\Iu0zSB92.gz",
+      "SourceId": "MicroservicesProject.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.JSInterop.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.JSInterop.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.JSInterop.dll"
+    },
+    {
       "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\IxwLirHY.gz",
       "SourceId": "MicroservicesProject.Client",
       "SourceType": "Computed",
@@ -5591,6 +5659,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt_EFIGS.dat"
+    },
+    {
+      "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\j2MXbjWO.gz",
+      "SourceId": "MicroservicesProject.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll"
     },
     {
       "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\j7BKFFBl.gz",
@@ -5797,23 +5882,6 @@
       "OriginalItemSpec": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Net.dll"
     },
     {
-      "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\l+BUlzvj.gz",
-      "SourceId": "MicroservicesProject.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Components.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll"
-    },
-    {
       "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\l3WSekgB.gz",
       "SourceId": "MicroservicesProject.Client",
       "SourceType": "Computed",
@@ -5965,6 +6033,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Win32.Primitives.dll"
+    },
+    {
+      "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\mYoM1xaY.gz",
+      "SourceId": "MicroservicesProject.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Authorization.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.dll"
     },
     {
       "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\n4Tl9Jmn.gz",
@@ -6460,23 +6545,6 @@
       "OriginalItemSpec": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Security.Claims.dll"
     },
     {
-      "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\rjatie9K.gz",
-      "SourceId": "MicroservicesProject.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.JSInterop.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.JSInterop.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.JSInterop.dll"
-    },
-    {
       "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\rqComZrJ.gz",
       "SourceId": "MicroservicesProject.Client",
       "SourceType": "Computed",
@@ -6528,21 +6596,21 @@
       "OriginalItemSpec": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Net.Mail.dll"
     },
     {
-      "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\sgLXYQND.gz",
+      "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\s3BNgKWj.gz",
       "SourceId": "MicroservicesProject.Client",
       "SourceType": "Computed",
       "ContentRoot": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Web.dll.gz",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Forms.dll.gz",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
-      "RelatedAsset": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.dll",
+      "RelatedAsset": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.dll",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.dll"
+      "OriginalItemSpec": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.dll"
     },
     {
       "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\sgrEp39W.gz",
@@ -6851,23 +6919,6 @@
       "OriginalItemSpec": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.UnmanagedMemoryStream.dll"
     },
     {
-      "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\V4o+MyY9.gz",
-      "SourceId": "MicroservicesProject.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Metadata.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll"
-    },
-    {
       "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\V8+4zctg.gz",
       "SourceId": "MicroservicesProject.Client",
       "SourceType": "Computed",
@@ -6970,6 +7021,23 @@
       "OriginalItemSpec": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Buffers.dll"
     },
     {
+      "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\W4S8VU+V.gz",
+      "SourceId": "MicroservicesProject.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Metadata.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll"
+    },
+    {
       "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\w5z7+QsD.gz",
       "SourceId": "MicroservicesProject.Client",
       "SourceType": "Computed",
@@ -7053,6 +7121,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.ServiceProcess.dll"
+    },
+    {
+      "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\WPzJAg1J.gz",
+      "SourceId": "MicroservicesProject.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Logging.Abstractions.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.dll"
     },
     {
       "Identity": "D:\\Dateien\\Dokumente\\Studium\\Theorie\\Vorlesungen\\Semester 6\\Microservices\\Projekt\\MicroservicesProject\\MicroservicesProject\\Client\\obj\\Debug\\net6.0\\build-gz\\WR1ssX1h.gz",

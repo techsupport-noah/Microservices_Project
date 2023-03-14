@@ -6,6 +6,8 @@ using FluentValidation;
 using MicroservicesProject.Events.Service.DataAccess;
 using MicroservicesProject.Events.Service.Model;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace MicroservicesProject.Events.Service.Controllers
 {
@@ -30,6 +32,9 @@ namespace MicroservicesProject.Events.Service.Controllers
 		[ProducesResponseType(typeof(IEnumerable<EventDetailsDto>), (int)HttpStatusCode.OK)]
 		[ProducesResponseType((int)HttpStatusCode.NotFound)]
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+		[ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+		[ProducesResponseType((int)HttpStatusCode.Forbidden)]
+		[Authorize(Roles = "User")]
 		public ActionResult<IEnumerable<EventDetailsDto>> GetAll()
 		{
 			var es = _dbContext.Events.ToList();
@@ -40,6 +45,9 @@ namespace MicroservicesProject.Events.Service.Controllers
 		[HttpPut(Name = "AddEvent")]
 		[ProducesResponseType((int)HttpStatusCode.OK)]
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+		[ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+		[ProducesResponseType((int)HttpStatusCode.Forbidden)]
+		[Authorize(Roles = "Administrator")]
 		public ActionResult AddEvent(EventDetailsDto e)
 		{
 			var result = _eValidator.Validate(e);
@@ -64,6 +72,9 @@ namespace MicroservicesProject.Events.Service.Controllers
 		[ProducesResponseType((int)HttpStatusCode.OK)]
 		[ProducesResponseType((int)HttpStatusCode.NotFound)]
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+		[ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+		[ProducesResponseType((int)HttpStatusCode.Forbidden)]
+		[Authorize(Roles = "Administrator")]
 		public ActionResult UpdateEvent(EventDetailsDto e)
 		{
 			var result = _eValidator.Validate(e);
@@ -92,6 +103,9 @@ namespace MicroservicesProject.Events.Service.Controllers
 		[ProducesResponseType((int)HttpStatusCode.OK)]
 		[ProducesResponseType((int)HttpStatusCode.NotFound)]
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+		[ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+		[ProducesResponseType((int)HttpStatusCode.Forbidden)]
+		[Authorize(Roles = "Administrator")]
 		public ActionResult DeleteEvent(Guid id)
 		{
 			var existingEvent = _dbContext.Events.FirstOrDefault(u => u.Id == id);

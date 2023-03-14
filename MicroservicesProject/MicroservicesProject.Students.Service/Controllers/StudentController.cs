@@ -5,6 +5,8 @@ using AutoMapper;
 using FluentValidation;
 using MicroservicesProject.Students.Service.DataAccess;
 using MicroservicesProject.Students.Service.Model;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace MicroservicesProject.Students.Service.Controllers
 {
@@ -29,6 +31,9 @@ namespace MicroservicesProject.Students.Service.Controllers
 		[ProducesResponseType(typeof(IEnumerable<StudentDetailsDto>), (int)HttpStatusCode.OK)]
 		[ProducesResponseType((int)HttpStatusCode.NotFound)]
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+		[ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+		[ProducesResponseType((int)HttpStatusCode.Forbidden)]
+		[Authorize(Roles = "Administrator")]
 		public ActionResult<IEnumerable<StudentDetailsDto>> GetAll()
 		{
 			var students = _dbContext.Students.ToList();
@@ -40,6 +45,9 @@ namespace MicroservicesProject.Students.Service.Controllers
 		[ProducesResponseType(typeof(IEnumerable<StudentDetailsDto>), (int)HttpStatusCode.OK)]
 		[ProducesResponseType((int)HttpStatusCode.NotFound)]
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+		[ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+		[ProducesResponseType((int)HttpStatusCode.Forbidden)]
+		[Authorize(Roles = "Administrator")]
 		public ActionResult<IEnumerable<StudentDetailsDto>> GetStudentsByCourseId(Guid id)
 		{
 			var student = _dbContext.Students.FirstOrDefault(s => s.CourseId == id);
@@ -50,6 +58,9 @@ namespace MicroservicesProject.Students.Service.Controllers
 		[HttpPut(Name = "AddStudent")]
 		[ProducesResponseType((int)HttpStatusCode.OK)]
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+		[ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+		[ProducesResponseType((int)HttpStatusCode.Forbidden)]
+		[Authorize(Roles = "Administrator")]
 		public ActionResult AddStudent(StudentDetailsDto student)
 		{
 			var result = _studentValidator.Validate(student);
@@ -74,6 +85,9 @@ namespace MicroservicesProject.Students.Service.Controllers
 		[ProducesResponseType((int)HttpStatusCode.OK)]
 		[ProducesResponseType((int)HttpStatusCode.NotFound)]
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+		[ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+		[ProducesResponseType((int)HttpStatusCode.Forbidden)]
+		[Authorize(Roles = "Administrator")]
 		public ActionResult UpdateStudent(StudentDetailsDto student)
 		{
 			var result = _studentValidator.Validate(student);
@@ -102,6 +116,9 @@ namespace MicroservicesProject.Students.Service.Controllers
 		[ProducesResponseType((int)HttpStatusCode.OK)]
 		[ProducesResponseType((int)HttpStatusCode.NotFound)]
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+		[ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+		[ProducesResponseType((int)HttpStatusCode.Forbidden)]
+		[Authorize(Roles = "Administrator")]
 		public ActionResult DeleteStudent(Guid id)
 		{
 			var existingStudent = _dbContext.Students.FirstOrDefault(u => u.Id == id);

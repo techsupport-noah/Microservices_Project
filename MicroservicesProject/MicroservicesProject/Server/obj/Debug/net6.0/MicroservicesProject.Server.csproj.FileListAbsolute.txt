@@ -66,3 +66,5 @@ D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projek
 D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Server\bin\Debug\net6.0\MicroservicesProject.Mail.Domain.pdb
 D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Server\bin\Debug\net6.0\MicroservicesProject.Students.Domain.pdb
 D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Server\bin\Debug\net6.0\MicroservicesProject.Users.Domain.pdb
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Server\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Authorization.dll
+D:\Dateien\Dokumente\Studium\Theorie\Vorlesungen\Semester 6\Microservices\Projekt\MicroservicesProject\MicroservicesProject\Server\bin\Debug\net6.0\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll

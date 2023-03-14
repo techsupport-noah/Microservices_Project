@@ -4,6 +4,7 @@ using FluentValidation;
 using MicroservicesProject.Courses.Domain.Dto;
 using MicroservicesProject.Courses.Service.DataAccess;
 using MicroservicesProject.Courses.Service.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MicroservicesProject.Courses.Service.Controllers
@@ -29,6 +30,9 @@ namespace MicroservicesProject.Courses.Service.Controllers
 		[ProducesResponseType(typeof(IEnumerable<CourseDetailsDto>), (int) HttpStatusCode.OK)]
 		[ProducesResponseType((int)HttpStatusCode.NotFound)]
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+		[ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+		[ProducesResponseType((int)HttpStatusCode.Forbidden)]
+		[Authorize(Roles = "User")]
 		public ActionResult<IEnumerable<CourseDetailsDto>> GetAll()
 		{
 			var courses = _dbContext.Courses.ToList();
@@ -39,6 +43,9 @@ namespace MicroservicesProject.Courses.Service.Controllers
 		[HttpPut(Name = "AddCourse")]
 		[ProducesResponseType((int)HttpStatusCode.OK)]
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+		[ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+		[ProducesResponseType((int)HttpStatusCode.Forbidden)]
+		[Authorize(Roles = "Administrator")]
 		public ActionResult AddCourse(CourseDetailsDto course)
 		{
 			var result = _courseValidator.Validate(course);
@@ -63,6 +70,9 @@ namespace MicroservicesProject.Courses.Service.Controllers
 		[ProducesResponseType((int)HttpStatusCode.OK)]
 		[ProducesResponseType((int)HttpStatusCode.NotFound)]
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+		[ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+		[ProducesResponseType((int)HttpStatusCode.Forbidden)]
+		[Authorize(Roles = "Administrator")]
 		public ActionResult UpdateCourse(CourseDetailsDto course)
 		{
 			var result = _courseValidator.Validate(course);
@@ -91,6 +101,9 @@ namespace MicroservicesProject.Courses.Service.Controllers
 		[ProducesResponseType((int)HttpStatusCode.OK)]
 		[ProducesResponseType((int)HttpStatusCode.NotFound)]
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+		[ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+		[ProducesResponseType((int)HttpStatusCode.Forbidden)]
+		[Authorize(Roles = "Administrator")]
 		public ActionResult DeleteCourse(Guid id)
 		{
 			var existingCourse = _dbContext.Courses.FirstOrDefault(u => u.Id == id);

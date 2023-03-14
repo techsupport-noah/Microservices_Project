@@ -1,9 +1,11 @@
+using System.Data;
 using System.Net;
 using AutoMapper;
 using FluentValidation;
 using MicroservicesProject.Invitations.Domain.Dto;
 using MicroservicesProject.Invitations.Service.DataAccess;
 using MicroservicesProject.Invitations.Service.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MicroservicesProject.Invitations.Service.Controllers
@@ -30,6 +32,9 @@ namespace MicroservicesProject.Invitations.Service.Controllers
 		[ProducesResponseType(typeof(IEnumerable<InvitationDetailsDto>), (int) HttpStatusCode.OK)]
 		[ProducesResponseType((int)HttpStatusCode.NotFound)]
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+		[ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+		[ProducesResponseType((int)HttpStatusCode.Forbidden)]
+		[Authorize(Roles = "User")]
 		public ActionResult<IEnumerable<InvitationDetailsDto>> GetAll()
 		{
 			var invitations = _dbContext.Invitations.ToList();
@@ -40,6 +45,9 @@ namespace MicroservicesProject.Invitations.Service.Controllers
 		[HttpPut(Name = "AddInvitation")]
 		[ProducesResponseType((int)HttpStatusCode.OK)]
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+		[ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+		[ProducesResponseType((int)HttpStatusCode.Forbidden)]
+		[Authorize(Roles = "Administrator")]
 		public ActionResult AddInvitation(InvitationDetailsDto invitation)
 		{
 			var result = _invitationValidator.Validate(invitation);
@@ -64,6 +72,9 @@ namespace MicroservicesProject.Invitations.Service.Controllers
 		[ProducesResponseType((int)HttpStatusCode.OK)]
 		[ProducesResponseType((int)HttpStatusCode.NotFound)]
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+		[ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+		[ProducesResponseType((int)HttpStatusCode.Forbidden)]
+		[Authorize(Roles = "Administrator")]
 		public ActionResult UpdateInvitation(InvitationDetailsDto invitation)
 		{
 			var result = _invitationValidator.Validate(invitation);
@@ -92,6 +103,9 @@ namespace MicroservicesProject.Invitations.Service.Controllers
 		[ProducesResponseType((int)HttpStatusCode.OK)]
 		[ProducesResponseType((int)HttpStatusCode.NotFound)]
 		[ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+		[ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+		[ProducesResponseType((int)HttpStatusCode.Forbidden)]
+		[Authorize(Roles = "Administrator")]
 		public ActionResult DeleteInvitation(Guid id)
 		{
 			var existingInvitation = _dbContext.Invitations.FirstOrDefault(u => u.Id == id);
